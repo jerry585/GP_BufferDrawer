@@ -1,0 +1,148 @@
+BOOL LoadJPGFile(string strPathName)
+{
+
+    // 打开源文件
+    FILE * infile = fopen(lpFile, "rb");
+    if(infile == NULL)
+    {
+        lstrcpy(Glb_lpImageError, _T("打开JPG文件失败！"));
+        return FALSE;
+    }
+
+    // JPEG解码程序
+    struct jpeg_decompress_struct  cinfo;
+
+    // JPEG错误跟踪
+    struct ima_error_mgr  jerr;
+    cinfo.err = jpeg_std_error(&jerr.pub);
+    jerr.pub.error_exit = ima_jpeg_error_exit;
+
+    if( setjmp(jerr.setjmp_buffer) )
+    {
+        lstrcpy(Glb_lpImageError, _T("设置错误跟踪断点失败！"));
+        jpeg_destroy_decompress(&cinfo);
+        fclose(infile);  return FALSE;
+    }
+
+    // 创建JPEG解码器
+    jpeg_create_decompress(&cinfo);
+
+    // 解码JPEG源文件
+    jpeg_stdio_src(&cinfo, infile);
+
+    // 读取JPEG图像属性
+    jpeg_read_header(&cinfo, 0x01);
+
+    // 当前图像的基本属性
+    int  nWidth = cinfo.image_width;
+    int  nHeight = cinfo.image_height;
+    int  nBitCount = cinfo.num_components * 8;
+
+    // 读取的参数是否有效
+    if( nWidth == 0 || nHeight == 0 || 
+        cinfo.jpeg_color_space == JCS_UNKNOWN )
+    {
+        lstrcpy(Glb_lpImageError, _T("读取图像基本参数！"));
+        jpeg_destroy_decompress(&cinfo);
+        fclose(infile);  return FALSE;
+    }
+
+    // 创建图像DIB信息
+    DWORD  dwSize = sizeof(BITMAPINFOHEADER);
+    LPBYTE  lpBuffer = new BYTE[dwSize + 1024];
+    LPBITMAPINFO  lpMapInfo = (LPBITMAPINFO)lpBuffer;
+
+    memset(lpBuffer, 0x00, dwSize + 1024);
+
+    lpMapInfo->bmiHeader.biSize = dwSize;
+    lpMapInfo->bmiHeader.biWidth = nWidth;
+    lpMapInfo->bmiHeader.biHeight = nHeight;
+    lpMapInfo->bmiHeader.biBitCount = nBitCount;
+
+    lpMapInfo->bmiHeader.biPlanes = 1;
+    lpMapInfo->bmiHeader.biCompression = BI_RGB;
+
+    // 图像原始逻辑尺寸
+    switch( cinfo.density_unit )
+    {
+    case 0x01:  // 英寸
+        lpMapInfo->bmiHeader.biXPelsPerMeter = 
+            (long)(cinfo.X_density * 100.0 / 2.54 + 0.5);
+        lpMapInfo->bmiHeader.biYPelsPerMeter = 
+            (long)(cinfo.Y_density * 100.0 / 2.54 + 0.5);
+        break;
+    case 0x02:  // 厘米
+        lpMapInfo->bmiHeader.biXPelsPerMeter = 
+            (long)(cinfo.X_density) * 100;
+        lpMapInfo->bmiHeader.biYPelsPerMeter = 
+            (long)(cinfo.Y_density) * 100;
+        break;
+    default: 
+        lpMapInfo->bmiHeader.biXPelsPerMeter = 0;
+        lpMapInfo->bmiHeader.biYPelsPerMeter = 0;
+        break;
+    }
+
+    // 创建图像DIB对象
+    DWORD  dwRowSize = (nWidth * nBitCount + 31) / 32 * 4;
+    LPBYTE  lpMapByte = new BYTE[dwRowSize * nHeight];
+    if(lpMapByte == NULL)
+    {
+        lstrcpy(Glb_lpImageError, _T("装载JPG图像，没有足够的内存！"));
+        jpeg_destroy_decompress(&cinfo);
+        fclose(infile);  return FALSE;
+    }
+
+    // 如果是灰度图像
+    if(cinfo.jpeg_color_space == JCS_GRAYSCALE)
+    {
+        for(int i = 0; i < 256; i ++)
+        {
+            lpMapInfo->bmiColors[i].rgbRed = (BYTE)i;
+            lpMapInfo->bmiColors[i].rgbBlue = (BYTE)i;
+            lpMapInfo->bmiColors[i].rgbGreen = (BYTE)i;
+            lpMapInfo->bmiColors[i].rgbReserved = 0x00;
+        }
+    }
+
+    // 准备开始JPEG解码
+    jpeg_start_decompress(&cinfo);
+
+    lpBuffer = lpMapByte + (dwRowSize * nHeight);
+
+    while(cinfo.output_scanline < cinfo.output_height)
+    {
+        // 当前扫描线
+        lpBuffer -= dwRowSize;
+        jpeg_read_scanlines(&cinfo, &lpBuffer, 1);
+
+        // Red 和 Blue需要交换
+        if(nBitCount > 8)
+        {
+            BYTE    btSwitch = 0x00;
+            LPBYTE  lpLine = lpBuffer;
+            for(int i = 0; i < nWidth; i ++)
+            {
+                btSwitch  = lpLine[0];
+                lpLine[0] = lpLine[2];
+                lpLine[2] =  btSwitch;
+                lpLine += cinfo.num_components;
+            }
+        }
+    }
+
+    jpeg_finish_decompress(&cinfo);
+
+    // 解码完毕，关闭文件
+    jpeg_destroy_decompress(&cinfo);
+    fclose(infile);
+
+    // 保存当前的图像
+    m_lpImage->m_biBitCount = nBitCount;
+    m_lpImage->m_dwRowSize = dwRowSize;
+    m_lpImage->m_lpMapInfo = lpMapInfo;
+    m_lpImage->m_lpMapByte = lpMapByte;
+    m_lpImage->m_biHeight = nHeight;
+    m_lpImage->m_biWidth = nWidth;
+    return TRUE;
+}

@@ -1,0 +1,498 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: testGBuffer - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"C:\temp\GBuffer\obj\testGBuffer\Debug/testGBuffer.res" /d "_DEBUG" /d "_AFXDLL" "C:\workspace\testGBuffer130714\testGBuffer\testGBuffer.rc"" 
+Creating temporary file "C:\Users\lindubin\AppData\Local\Temp\RSPAD51.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /D "GIS_API_EXPORTS" /FR"C:\temp\GBuffer\obj\testGBuffer\Debug/" /Fo"C:\temp\GBuffer\obj\testGBuffer\Debug/" /Fd"C:\temp\GBuffer\obj\testGBuffer\Debug/" /FD /GZ /c 
+"C:\workspace\testGBuffer130714\testGBuffer\bmpfile.cpp"
+"C:\workspace\testGBuffer130714\testGBuffer\MainFrm.cpp"
+"C:\workspace\testGBuffer130714\testGBuffer\RoadFindSelDlg.cpp"
+"C:\workspace\testGBuffer130714\testGBuffer\testGBuffer.cpp"
+"C:\workspace\testGBuffer130714\testGBuffer\testGBufferDoc.cpp"
+"C:\workspace\testGBuffer130714\testGBuffer\testGBufferView.cpp"
+"C:\workspace\testGBuffer130714\testGBuffer\GP_BaseTools.cpp"
+"C:\workspace\testGBuffer130714\testGBuffer\GP_BitMap.cpp"
+"C:\workspace\testGBuffer130714\testGBuffer\GP_Dir.cpp"
+"C:\workspace\testGBuffer130714\testGBuffer\GP_Document.cpp"
+"C:\workspace\testGBuffer130714\testGBuffer\GP_DrawingArea.cpp"
+"C:\workspace\testGBuffer130714\testGBuffer\GP_File.cpp"
+"C:\workspace\testGBuffer130714\testGBuffer\GP_Node.cpp"
+"C:\workspace\testGBuffer130714\testGBuffer\GP_PixelBuffer.cpp"
+"C:\workspace\testGBuffer130714\testGBuffer\GP_PixelDrawer.cpp"
+"C:\workspace\testGBuffer130714\testGBuffer\GP_Performance.cpp"
+"C:\workspace\testGBuffer130714\testGBuffer\GP_Time.cpp"
+"C:\workspace\testGBuffer130714\testGBuffer\pico\zlib\adler32.c"
+"C:\workspace\testGBuffer130714\testGBuffer\pico\zlib\deflate.c"
+"C:\workspace\testGBuffer130714\testGBuffer\pico\zlib\inffast.c"
+"C:\workspace\testGBuffer130714\testGBuffer\pico\zlib\inflate.c"
+"C:\workspace\testGBuffer130714\testGBuffer\pico\zlib\inftrees.c"
+"C:\workspace\testGBuffer130714\testGBuffer\pico\zlib\trees.c"
+"C:\workspace\testGBuffer130714\testGBuffer\pico\zlib\zutil.c"
+"C:\workspace\testGBuffer130714\testGBuffer\pico\blockset.cpp"
+"C:\workspace\testGBuffer130714\testGBuffer\pico\cache.cpp"
+"C:\workspace\testGBuffer130714\testGBuffer\pico\cacheentry.cpp"
+"C:\workspace\testGBuffer130714\testGBuffer\pico\compress.cpp"
+"C:\workspace\testGBuffer130714\testGBuffer\pico\dir.cpp"
+"C:\workspace\testGBuffer130714\testGBuffer\pico\diriterator.cpp"
+"C:\workspace\testGBuffer130714\testGBuffer\pico\file.cpp"
+"C:\workspace\testGBuffer130714\testGBuffer\pico\freespace.cpp"
+"C:\workspace\testGBuffer130714\testGBuffer\pico\gen.cpp"
+"C:\workspace\testGBuffer130714\testGBuffer\pico\hashtable.cpp"
+"C:\workspace\testGBuffer130714\testGBuffer\pico\log.cpp"
+"C:\workspace\testGBuffer130714\testGBuffer\pico\lru.cpp"
+"C:\workspace\testGBuffer130714\testGBuffer\pico\os.cpp"
+"C:\workspace\testGBuffer130714\testGBuffer\pico\osdir.cpp"
+"C:\workspace\testGBuffer130714\testGBuffer\pico\osfile.cpp"
+"C:\workspace\testGBuffer130714\testGBuffer\pico\picostorage.cpp"
+"C:\workspace\testGBuffer130714\testGBuffer\pico\slices.cpp"
+"C:\workspace\testGBuffer130714\testGBuffer\pico\storageparams.cpp"
+]
+Creating command line "cl.exe @C:\Users\lindubin\AppData\Local\Temp\RSPAD51.tmp" 
+Creating temporary file "C:\Users\lindubin\AppData\Local\Temp\RSPAD52.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /D "GIS_API_EXPORTS" /FR"C:\temp\GBuffer\obj\testGBuffer\Debug/" /Fp"C:\temp\GBuffer\obj\testGBuffer\Debug/testGBuffer.pch" /Yc"stdafx.h" /Fo"C:\temp\GBuffer\obj\testGBuffer\Debug/" /Fd"C:\temp\GBuffer\obj\testGBuffer\Debug/" /FD /GZ /c 
+"C:\workspace\testGBuffer130714\testGBuffer\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\lindubin\AppData\Local\Temp\RSPAD52.tmp" 
+Creating temporary file "C:\Users\lindubin\AppData\Local\Temp\RSPAD53.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"C:\temp\GBuffer\obj\testGBuffer\Debug/testGBufferd.pdb" /debug /machine:I386 /out:"C:\temp\GBuffer\obj\testGBuffer\Debug/testGBufferd.exe" /pdbtype:sept /libpath:"C:\temp\gise\lib" 
+\temp\GBuffer\obj\testGBuffer\Debug\bmpfile.obj
+\temp\GBuffer\obj\testGBuffer\Debug\MainFrm.obj
+\temp\GBuffer\obj\testGBuffer\Debug\RoadFindSelDlg.obj
+\temp\GBuffer\obj\testGBuffer\Debug\StdAfx.obj
+\temp\GBuffer\obj\testGBuffer\Debug\testGBuffer.obj
+\temp\GBuffer\obj\testGBuffer\Debug\testGBuffer.res
+\temp\GBuffer\obj\testGBuffer\Debug\testGBufferDoc.obj
+\temp\GBuffer\obj\testGBuffer\Debug\testGBufferView.obj
+\temp\GBuffer\obj\testGBuffer\Debug\GP_BaseTools.obj
+\temp\GBuffer\obj\testGBuffer\Debug\GP_BitMap.obj
+\temp\GBuffer\obj\testGBuffer\Debug\GP_Dir.obj
+\temp\GBuffer\obj\testGBuffer\Debug\GP_Document.obj
+\temp\GBuffer\obj\testGBuffer\Debug\GP_DrawingArea.obj
+\temp\GBuffer\obj\testGBuffer\Debug\GP_File.obj
+\temp\GBuffer\obj\testGBuffer\Debug\GP_Node.obj
+\temp\GBuffer\obj\testGBuffer\Debug\GP_PixelBuffer.obj
+\temp\GBuffer\obj\testGBuffer\Debug\GP_PixelDrawer.obj
+\temp\GBuffer\obj\testGBuffer\Debug\GP_Performance.obj
+\temp\GBuffer\obj\testGBuffer\Debug\GP_Time.obj
+\temp\GBuffer\obj\testGBuffer\Debug\adler32.obj
+\temp\GBuffer\obj\testGBuffer\Debug\deflate.obj
+\temp\GBuffer\obj\testGBuffer\Debug\inffast.obj
+\temp\GBuffer\obj\testGBuffer\Debug\inflate.obj
+\temp\GBuffer\obj\testGBuffer\Debug\inftrees.obj
+\temp\GBuffer\obj\testGBuffer\Debug\trees.obj
+\temp\GBuffer\obj\testGBuffer\Debug\zutil.obj
+\temp\GBuffer\obj\testGBuffer\Debug\blockset.obj
+\temp\GBuffer\obj\testGBuffer\Debug\cache.obj
+\temp\GBuffer\obj\testGBuffer\Debug\cacheentry.obj
+\temp\GBuffer\obj\testGBuffer\Debug\compress.obj
+\temp\GBuffer\obj\testGBuffer\Debug\dir.obj
+\temp\GBuffer\obj\testGBuffer\Debug\diriterator.obj
+\temp\GBuffer\obj\testGBuffer\Debug\file.obj
+\temp\GBuffer\obj\testGBuffer\Debug\freespace.obj
+\temp\GBuffer\obj\testGBuffer\Debug\gen.obj
+\temp\GBuffer\obj\testGBuffer\Debug\hashtable.obj
+\temp\GBuffer\obj\testGBuffer\Debug\log.obj
+\temp\GBuffer\obj\testGBuffer\Debug\lru.obj
+\temp\GBuffer\obj\testGBuffer\Debug\os.obj
+\temp\GBuffer\obj\testGBuffer\Debug\osdir.obj
+\temp\GBuffer\obj\testGBuffer\Debug\osfile.obj
+\temp\GBuffer\obj\testGBuffer\Debug\picostorage.obj
+\temp\GBuffer\obj\testGBuffer\Debug\slices.obj
+\temp\GBuffer\obj\testGBuffer\Debug\storageparams.obj
+]
+Creating command line "link.exe @C:\Users\lindubin\AppData\Local\Temp\RSPAD53.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+bmpfile.cpp
+c:\workspace\testgbuffer130714\testgbuffer\gp_commontype.h(159) : warning C4244: 'initializing' : conversion from 'long' to 'unsigned short', possible loss of data
+c:\workspace\testgbuffer130714\testgbuffer\gp_commontype.h(170) : warning C4244: 'initializing' : conversion from 'long' to 'unsigned short', possible loss of data
+c:\workspace\testgbuffer130714\testgbuffer\bmpfile.cpp(194) : warning C4018: '<' : signed/unsigned mismatch
+c:\workspace\testgbuffer130714\testgbuffer\bmpfile.cpp(233) : warning C4018: '<' : signed/unsigned mismatch
+c:\workspace\testgbuffer130714\testgbuffer\bmpfile.cpp(235) : warning C4018: '<' : signed/unsigned mismatch
+c:\workspace\testgbuffer130714\testgbuffer\bmpfile.cpp(252) : warning C4018: '<' : signed/unsigned mismatch
+c:\workspace\testgbuffer130714\testgbuffer\bmpfile.cpp(478) : warning C4018: '<' : signed/unsigned mismatch
+c:\workspace\testgbuffer130714\testgbuffer\bmpfile.cpp(512) : warning C4018: '<' : signed/unsigned mismatch
+c:\workspace\testgbuffer130714\testgbuffer\bmpfile.cpp(574) : warning C4018: '<' : signed/unsigned mismatch
+c:\workspace\testgbuffer130714\testgbuffer\bmpfile.cpp(586) : warning C4018: '<' : signed/unsigned mismatch
+c:\workspace\testgbuffer130714\testgbuffer\bmpfile.cpp(598) : warning C4018: '<' : signed/unsigned mismatch
+MainFrm.cpp
+RoadFindSelDlg.cpp
+testGBuffer.cpp
+c:\program files (x86)\microsoft visual studio\vc98\include\vector(48) : warning C4786: '??0?$vector@V?$vector@U_GP_DPoint@@V?$allocator@U_GP_DPoint@@@std@@@std@@V?$allocator@V?$vector@U_GP_DPoint@@V?$allocator@U_GP_DPoint@@@std@@@std@@@2@@std@@QAE@IABV?$vector@U_GP_DPoint@@V?$allocator@U_GP_DPoint@@@std@@@1@ABV?$allocator@V?$vector@U_GP_DPoint@@V?$allocator@U_GP_DPoint@@@std@@@std@@@1@@Z' : identifier was truncated to '255' characters in the browser information
+        c:\workspace\testgbuffer130714\testgbuffer\testgbufferview.h(216) : see reference to class template instantiation 'std::vector<class std::vector<struct _GP_DPoint,class std::allocator<struct _GP_DPoint> >,class std::allocator<class std::vector<struct _GP_DPoint,class std::allocator<struct _GP_DPoint> > > >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\vector(61) : warning C4786: '??0?$vector@V?$vector@U_GP_DPoint@@V?$allocator@U_GP_DPoint@@@std@@@std@@V?$allocator@V?$vector@U_GP_DPoint@@V?$allocator@U_GP_DPoint@@@std@@@std@@@2@@std@@QAE@PBV?$vector@U_GP_DPoint@@V?$allocator@U_GP_DPoint@@@std@@@1@0ABV?$allocator@V?$vector@U_GP_DPoint@@V?$allocator@U_GP_DPoint@@@std@@@std@@@1@@Z' : identifier was truncated to '255' characters in the browser information
+        c:\workspace\testgbuffer130714\testgbuffer\testgbufferview.h(216) : see reference to class template instantiation 'std::vector<class std::vector<struct _GP_DPoint,class std::allocator<struct _GP_DPoint> >,class std::allocator<class std::vector<struct _GP_DPoint,class std::allocator<struct _GP_DPoint> > > >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\vector(103) : warning C4786: '?rbegin@?$vector@V?$vector@U_GP_DPoint@@V?$allocator@U_GP_DPoint@@@std@@@std@@V?$allocator@V?$vector@U_GP_DPoint@@V?$allocator@U_GP_DPoint@@@std@@@std@@@2@@std@@QAE?AV?$reverse_iterator@PAV?$vector@U_GP_DPoint@@V?$allocator@U_GP_DPoint@@@std@@@std@@V12@AAV12@PAV12@H@2@XZ' : identifier was truncated to '255' characters in the browser information
+        c:\workspace\testgbuffer130714\testgbuffer\testgbufferview.h(216) : see reference to class template instantiation 'std::vector<class std::vector<struct _GP_DPoint,class std::allocator<struct _GP_DPoint> >,class std::allocator<class std::vector<struct _GP_DPoint,class std::allocator<struct _GP_DPoint> > > >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\vector(105) : warning C4786: '?rbegin@?$vector@V?$vector@U_GP_DPoint@@V?$allocator@U_GP_DPoint@@@std@@@std@@V?$allocator@V?$vector@U_GP_DPoint@@V?$allocator@U_GP_DPoint@@@std@@@std@@@2@@std@@QBE?AV?$reverse_iterator@PBV?$vector@U_GP_DPoint@@V?$allocator@U_GP_DPoint@@@std@@@std@@V12@ABV12@PBV12@H@2@XZ' : identifier was truncated to '255' characters in the browser information
+        c:\workspace\testgbuffer130714\testgbuffer\testgbufferview.h(216) : see reference to class template instantiation 'std::vector<class std::vector<struct _GP_DPoint,class std::allocator<struct _GP_DPoint> >,class std::allocator<class std::vector<struct _GP_DPoint,class std::allocator<struct _GP_DPoint> > > >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\vector(107) : warning C4786: '?rend@?$vector@V?$vector@U_GP_DPoint@@V?$allocator@U_GP_DPoint@@@std@@@std@@V?$allocator@V?$vector@U_GP_DPoint@@V?$allocator@U_GP_DPoint@@@std@@@std@@@2@@std@@QAE?AV?$reverse_iterator@PAV?$vector@U_GP_DPoint@@V?$allocator@U_GP_DPoint@@@std@@@std@@V12@AAV12@PAV12@H@2@XZ' : identifier was truncated to '255' characters in the browser information
+        c:\workspace\testgbuffer130714\testgbuffer\testgbufferview.h(216) : see reference to class template instantiation 'std::vector<class std::vector<struct _GP_DPoint,class std::allocator<struct _GP_DPoint> >,class std::allocator<class std::vector<struct _GP_DPoint,class std::allocator<struct _GP_DPoint> > > >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\vector(108) : warning C4786: '?rend@?$vector@V?$vector@U_GP_DPoint@@V?$allocator@U_GP_DPoint@@@std@@@std@@V?$allocator@V?$vector@U_GP_DPoint@@V?$allocator@U_GP_DPoint@@@std@@@std@@@2@@std@@QBE?AV?$reverse_iterator@PBV?$vector@U_GP_DPoint@@V?$allocator@U_GP_DPoint@@@std@@@std@@V12@ABV12@PBV12@H@2@XZ' : identifier was truncated to '255' characters in the browser information
+        c:\workspace\testgbuffer130714\testgbuffer\testgbufferview.h(216) : see reference to class template instantiation 'std::vector<class std::vector<struct _GP_DPoint,class std::allocator<struct _GP_DPoint> >,class std::allocator<class std::vector<struct _GP_DPoint,class std::allocator<struct _GP_DPoint> > > >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\utility(21) : warning C4786: 'std::reverse_iterator<std::vector<_GP_DPoint,std::allocator<_GP_DPoint> > const *,std::vector<_GP_DPoint,std::allocator<_GP_DPoint> >,std::vector<_GP_DPoint,std::allocator<_GP_DPoint> > const &,std::vector<_GP_DPoint,std::allocator<_GP_DPoint> > const *,int>' : identifier was truncated to '255' characters in the debug information
+testGBufferDoc.cpp
+testGBufferView.cpp
+c:\program files (x86)\microsoft visual studio\vc98\include\vector(48) : warning C4786: '??0?$vector@V?$vector@U_GP_DPoint@@V?$allocator@U_GP_DPoint@@@std@@@std@@V?$allocator@V?$vector@U_GP_DPoint@@V?$allocator@U_GP_DPoint@@@std@@@std@@@2@@std@@QAE@IABV?$vector@U_GP_DPoint@@V?$allocator@U_GP_DPoint@@@std@@@1@ABV?$allocator@V?$vector@U_GP_DPoint@@V?$allocator@U_GP_DPoint@@@std@@@std@@@1@@Z' : identifier was truncated to '255' characters in the browser information
+        c:\workspace\testgbuffer130714\testgbuffer\testgbufferview.h(216) : see reference to class template instantiation 'std::vector<class std::vector<struct _GP_DPoint,class std::allocator<struct _GP_DPoint> >,class std::allocator<class std::vector<struct _GP_DPoint,class std::allocator<struct _GP_DPoint> > > >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\vector(61) : warning C4786: '??0?$vector@V?$vector@U_GP_DPoint@@V?$allocator@U_GP_DPoint@@@std@@@std@@V?$allocator@V?$vector@U_GP_DPoint@@V?$allocator@U_GP_DPoint@@@std@@@std@@@2@@std@@QAE@PBV?$vector@U_GP_DPoint@@V?$allocator@U_GP_DPoint@@@std@@@1@0ABV?$allocator@V?$vector@U_GP_DPoint@@V?$allocator@U_GP_DPoint@@@std@@@std@@@1@@Z' : identifier was truncated to '255' characters in the browser information
+        c:\workspace\testgbuffer130714\testgbuffer\testgbufferview.h(216) : see reference to class template instantiation 'std::vector<class std::vector<struct _GP_DPoint,class std::allocator<struct _GP_DPoint> >,class std::allocator<class std::vector<struct _GP_DPoint,class std::allocator<struct _GP_DPoint> > > >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\vector(103) : warning C4786: '?rbegin@?$vector@V?$vector@U_GP_DPoint@@V?$allocator@U_GP_DPoint@@@std@@@std@@V?$allocator@V?$vector@U_GP_DPoint@@V?$allocator@U_GP_DPoint@@@std@@@std@@@2@@std@@QAE?AV?$reverse_iterator@PAV?$vector@U_GP_DPoint@@V?$allocator@U_GP_DPoint@@@std@@@std@@V12@AAV12@PAV12@H@2@XZ' : identifier was truncated to '255' characters in the browser information
+        c:\workspace\testgbuffer130714\testgbuffer\testgbufferview.h(216) : see reference to class template instantiation 'std::vector<class std::vector<struct _GP_DPoint,class std::allocator<struct _GP_DPoint> >,class std::allocator<class std::vector<struct _GP_DPoint,class std::allocator<struct _GP_DPoint> > > >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\vector(105) : warning C4786: '?rbegin@?$vector@V?$vector@U_GP_DPoint@@V?$allocator@U_GP_DPoint@@@std@@@std@@V?$allocator@V?$vector@U_GP_DPoint@@V?$allocator@U_GP_DPoint@@@std@@@std@@@2@@std@@QBE?AV?$reverse_iterator@PBV?$vector@U_GP_DPoint@@V?$allocator@U_GP_DPoint@@@std@@@std@@V12@ABV12@PBV12@H@2@XZ' : identifier was truncated to '255' characters in the browser information
+        c:\workspace\testgbuffer130714\testgbuffer\testgbufferview.h(216) : see reference to class template instantiation 'std::vector<class std::vector<struct _GP_DPoint,class std::allocator<struct _GP_DPoint> >,class std::allocator<class std::vector<struct _GP_DPoint,class std::allocator<struct _GP_DPoint> > > >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\vector(107) : warning C4786: '?rend@?$vector@V?$vector@U_GP_DPoint@@V?$allocator@U_GP_DPoint@@@std@@@std@@V?$allocator@V?$vector@U_GP_DPoint@@V?$allocator@U_GP_DPoint@@@std@@@std@@@2@@std@@QAE?AV?$reverse_iterator@PAV?$vector@U_GP_DPoint@@V?$allocator@U_GP_DPoint@@@std@@@std@@V12@AAV12@PAV12@H@2@XZ' : identifier was truncated to '255' characters in the browser information
+        c:\workspace\testgbuffer130714\testgbuffer\testgbufferview.h(216) : see reference to class template instantiation 'std::vector<class std::vector<struct _GP_DPoint,class std::allocator<struct _GP_DPoint> >,class std::allocator<class std::vector<struct _GP_DPoint,class std::allocator<struct _GP_DPoint> > > >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\vector(108) : warning C4786: '?rend@?$vector@V?$vector@U_GP_DPoint@@V?$allocator@U_GP_DPoint@@@std@@@std@@V?$allocator@V?$vector@U_GP_DPoint@@V?$allocator@U_GP_DPoint@@@std@@@std@@@2@@std@@QBE?AV?$reverse_iterator@PBV?$vector@U_GP_DPoint@@V?$allocator@U_GP_DPoint@@@std@@@std@@V12@ABV12@PBV12@H@2@XZ' : identifier was truncated to '255' characters in the browser information
+        c:\workspace\testgbuffer130714\testgbuffer\testgbufferview.h(216) : see reference to class template instantiation 'std::vector<class std::vector<struct _GP_DPoint,class std::allocator<struct _GP_DPoint> >,class std::allocator<class std::vector<struct _GP_DPoint,class std::allocator<struct _GP_DPoint> > > >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\xtree(200) : warning C4786: '?rbegin@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@QAE?AV?$reverse_bidirectional_iterator@Viterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@U?$pair@QBDUTimeRound@@@3@AAU43@PAU43@H@2@XZ' : identifier was truncated to '255' characters in the browser information
+        c:\program files (x86)\microsoft visual studio\vc98\include\map(46) : see reference to class template instantiation 'std::_Tree<char const *,struct std::pair<char const * const,struct TimeRound>,struct std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >::_Kfn,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+        c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(38) : see reference to class template instantiation 'std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\xtree(202) : warning C4786: '?rbegin@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@QBE?AV?$reverse_bidirectional_iterator@Vconst_iterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@U?$pair@QBDUTimeRound@@@3@ABU43@PBU43@H@2@XZ' : identifier was truncated to '255' characters in the browser information
+        c:\program files (x86)\microsoft visual studio\vc98\include\map(46) : see reference to class template instantiation 'std::_Tree<char const *,struct std::pair<char const * const,struct TimeRound>,struct std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >::_Kfn,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+        c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(38) : see reference to class template instantiation 'std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\xtree(204) : warning C4786: '?rend@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@QAE?AV?$reverse_bidirectional_iterator@Viterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@U?$pair@QBDUTimeRound@@@3@AAU43@PAU43@H@2@XZ' : identifier was truncated to '255' characters in the browser information
+        c:\program files (x86)\microsoft visual studio\vc98\include\map(46) : see reference to class template instantiation 'std::_Tree<char const *,struct std::pair<char const * const,struct TimeRound>,struct std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >::_Kfn,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+        c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(38) : see reference to class template instantiation 'std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\xtree(206) : warning C4786: '?rend@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@QBE?AV?$reverse_bidirectional_iterator@Vconst_iterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@U?$pair@QBDUTimeRound@@@3@ABU43@PBU43@H@2@XZ' : identifier was truncated to '255' characters in the browser information
+        c:\program files (x86)\microsoft visual studio\vc98\include\map(46) : see reference to class template instantiation 'std::_Tree<char const *,struct std::pair<char const * const,struct TimeRound>,struct std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >::_Kfn,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+        c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(38) : see reference to class template instantiation 'std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\xtree(237) : warning C4786: '?insert@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@QAE?AU?$pair@Viterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@_N@2@ABU?$pair@QBDUTimeRound@@@2@@Z' : identifier was truncated to '255' characters in the browser information
+        c:\program files (x86)\microsoft visual studio\vc98\include\map(46) : see reference to class template instantiation 'std::_Tree<char const *,struct std::pair<char const * const,struct TimeRound>,struct std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >::_Kfn,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+        c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(38) : see reference to class template instantiation 'std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\xtree(411) : warning C4786: '?equal_range@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@QAE?AU?$pair@Viterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@V123@@2@ABQBD@Z' : identifier was truncated to '255' characters in the browser information
+        c:\program files (x86)\microsoft visual studio\vc98\include\map(46) : see reference to class template instantiation 'std::_Tree<char const *,struct std::pair<char const * const,struct TimeRound>,struct std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >::_Kfn,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+        c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(38) : see reference to class template instantiation 'std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\xtree(414) : warning C4786: '?equal_range@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@QBE?AU?$pair@Vconst_iterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@V123@@2@ABQBD@Z' : identifier was truncated to '255' characters in the browser information
+        c:\program files (x86)\microsoft visual studio\vc98\include\map(46) : see reference to class template instantiation 'std::_Tree<char const *,struct std::pair<char const * const,struct TimeRound>,struct std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >::_Kfn,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+        c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(38) : see reference to class template instantiation 'std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\map(79) : warning C4786: '?rbegin@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@std@@QAE?AV?$reverse_bidirectional_iterator@Viterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@U?$pair@QBDUTimeRound@@@3@AAU43@PAU43@H@2@XZ' : identifier was truncated to '255' characters in the browser information
+        c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(38) : see reference to class template instantiation 'std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\map(81) : warning C4786: '?rbegin@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@std@@QBE?AV?$reverse_bidirectional_iterator@Vconst_iterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@U?$pair@QBDUTimeRound@@@3@ABU43@PBU43@H@2@XZ' : identifier was truncated to '255' characters in the browser information
+        c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(38) : see reference to class template instantiation 'std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\map(83) : warning C4786: '?rend@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@std@@QAE?AV?$reverse_bidirectional_iterator@Viterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@U?$pair@QBDUTimeRound@@@3@AAU43@PAU43@H@2@XZ' : identifier was truncated to '255' characters in the browser information
+        c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(38) : see reference to class template instantiation 'std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\map(85) : warning C4786: '?rend@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@std@@QBE?AV?$reverse_bidirectional_iterator@Vconst_iterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@U?$pair@QBDUTimeRound@@@3@ABU43@PBU43@H@2@XZ' : identifier was truncated to '255' characters in the browser information
+        c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(38) : see reference to class template instantiation 'std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\map(98) : warning C4786: '?insert@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@std@@QAE?AU?$pair@Viterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@_N@2@ABU?$pair@QBDUTimeRound@@@2@@Z' : identifier was truncated to '255' characters in the browser information
+        c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(38) : see reference to class template instantiation 'std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\map(100) : warning C4786: '?insert@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@std@@QAE?AViterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@2@V342@ABU?$pair@QBDUTimeRound@@@2@@Z' : identifier was truncated to '255' characters in the browser information
+        c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(38) : see reference to class template instantiation 'std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\map(136) : warning C4786: '?equal_range@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@std@@QAE?AU?$pair@Viterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@V123@@2@ABQBD@Z' : identifier was truncated to '255' characters in the browser information
+        c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(38) : see reference to class template instantiation 'std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\map(139) : warning C4786: '?equal_range@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@std@@QBE?AU?$pair@Vconst_iterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@V123@@2@ABQBD@Z' : identifier was truncated to '255' characters in the browser information
+        c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(38) : see reference to class template instantiation 'std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\utility(23) : warning C4786: '??0?$pair@Viterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@_N@std@@QAE@ABViterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@1@AB_N@Z' : identifier was truncated to '255' characters in the browser information
+        c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(49) : see reference to class template instantiation 'std::pair<class std::_Tree<char const *,struct std::pair<char const * const,struct TimeRound>,struct std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >::_Kfn,struct ltstr,class std::allocator<struct TimeRound> >::iterator,bool>' being compiled
+c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(51) : warning C4786: 'std::reverse_bidirectional_iterator<std::_Tree<char const *,std::pair<char const * const,TimeRound>,std::map<char const *,TimeRound,ltstr,std::allocator<TimeRound> >::_Kfn,ltstr,std::allocator<TimeRound> >::iterator,std::pair<char const * const,TimeRound>,std::pair<char const * const,TimeRound> &,std::pair<char const * const,TimeRound> *,int>' : identifier was truncated to '255' characters in the debug information
+c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(51) : warning C4786: 'std::reverse_bidirectional_iterator<std::_Tree<char const *,std::pair<char const * const,TimeRound>,std::map<char const *,TimeRound,ltstr,std::allocator<TimeRound> >::_Kfn,ltstr,std::allocator<TimeRound> >::const_iterator,std::pair<char const * const,TimeRound>,std::pair<char const * const,TimeRound> const &,std::pair<char const * const,TimeRound> const *,int>' : identifier was truncated to '255' characters in the debug information
+c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(51) : warning C4786: 'std::pair<std::_Tree<char const *,std::pair<char const * const,TimeRound>,std::map<char const *,TimeRound,ltstr,std::allocator<TimeRound> >::_Kfn,ltstr,std::allocator<TimeRound> >::iterator,std::_Tree<char const *,std::pair<char const * const,TimeRound>,std::map<char const *,TimeRound,ltstr,std::allocator<TimeRound> >::_Kfn,ltstr,std::allocator<TimeRound> >::iterator>' : identifier was truncated to '255' characters in the debug information
+c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(51) : warning C4786: 'std::pair<std::_Tree<char const *,std::pair<char const * const,TimeRound>,std::map<char const *,TimeRound,ltstr,std::allocator<TimeRound> >::_Kfn,ltstr,std::allocator<TimeRound> >::const_iterator,std::_Tree<char const *,std::pair<char const * const,TimeRound>,std::map<char const *,TimeRound,ltstr,std::allocator<TimeRound> >::_Kfn,ltstr,std::allocator<TimeRound> >::const_iterator>' : identifier was truncated to '255' characters in the debug information
+c:\program files (x86)\microsoft visual studio\vc98\include\vector(48) : warning C4786: '??0?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@QAE@IABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@ABV?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@1@@Z' : identifier was truncated to '255' characters in the browser information
+        c:\workspace\testgbuffer130714\testgbuffer\testgbufferview.cpp(41) : see reference to class template instantiation 'std::vector<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::allocator<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\vector(61) : warning C4786: '??0?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@QAE@PBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@0ABV?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@1@@Z' : identifier was truncated to '255' characters in the browser information
+        c:\workspace\testgbuffer130714\testgbuffer\testgbufferview.cpp(41) : see reference to class template instantiation 'std::vector<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::allocator<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\vector(103) : warning C4786: '?rbegin@?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@QAE?AV?$reverse_iterator@PAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@AAV12@PAV12@H@2@XZ' : identifier was truncated to '255' characters in the browser information
+        c:\workspace\testgbuffer130714\testgbuffer\testgbufferview.cpp(41) : see reference to class template instantiation 'std::vector<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::allocator<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\vector(105) : warning C4786: '?rbegin@?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@QBE?AV?$reverse_iterator@PBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@ABV12@PBV12@H@2@XZ' : identifier was truncated to '255' characters in the browser information
+        c:\workspace\testgbuffer130714\testgbuffer\testgbufferview.cpp(41) : see reference to class template instantiation 'std::vector<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::allocator<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\vector(107) : warning C4786: '?rend@?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@QAE?AV?$reverse_iterator@PAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@AAV12@PAV12@H@2@XZ' : identifier was truncated to '255' characters in the browser information
+        c:\workspace\testgbuffer130714\testgbuffer\testgbufferview.cpp(41) : see reference to class template instantiation 'std::vector<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::allocator<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\vector(108) : warning C4786: '?rend@?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@QBE?AV?$reverse_iterator@PBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@ABV12@PBV12@H@2@XZ' : identifier was truncated to '255' characters in the browser information
+        c:\workspace\testgbuffer130714\testgbuffer\testgbufferview.cpp(41) : see reference to class template instantiation 'std::vector<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::allocator<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > >' being compiled
+c:\workspace\testgbuffer130714\testgbuffer\testgbufferview.cpp(145) : warning C4786: 'std::reverse_iterator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const *,std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> > const &,std::basic_string<char,std::char_traits<char>,std::allocator<char> > const *,int>' : identifier was truncated to '255' characters in the debug information
+c:\workspace\testgbuffer130714\testgbuffer\testgbufferview.cpp(145) : warning C4786: 'std::reverse_iterator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> > &,std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,int>' : identifier was truncated to '255' characters in the debug information
+c:\workspace\testgbuffer130714\testgbuffer\testgbufferview.cpp(215) : warning C4101: 'k' : unreferenced local variable
+c:\workspace\testgbuffer130714\testgbuffer\testgbufferview.cpp(215) : warning C4101: 'm' : unreferenced local variable
+c:\workspace\testgbuffer130714\testgbuffer\testgbufferview.cpp(215) : warning C4101: 'id' : unreferenced local variable
+c:\workspace\testgbuffer130714\testgbuffer\testgbufferview.cpp(215) : warning C4101: 'ite' : unreferenced local variable
+c:\workspace\testgbuffer130714\testgbuffer\testgbufferview.cpp(386) : warning C4101: 't' : unreferenced local variable
+c:\program files (x86)\microsoft visual studio\vc98\include\vector(39) : warning C4786: 'std::reverse_iterator<std::vector<_GP_DPoint,std::allocator<_GP_DPoint> > const *,std::vector<_GP_DPoint,std::allocator<_GP_DPoint> >,std::vector<_GP_DPoint,std::allocator<_GP_DPoint> > const &,std::vector<_GP_DPoint,std::allocator<_GP_DPoint> > const *,int>' : identifier was truncated to '255' characters in the debug information
+        c:\program files (x86)\microsoft visual studio\vc98\include\vector(39) : while compiling class-template member function '__thiscall std::vector<std::vector<_GP_DPoint,std::allocator<_GP_DPoint> >,std::allocator<std::vector<_GP_DPoint,std::allocator<_GP_DPoint> > > >::std::vector<std::vector<_GP_DPoint,std::allocator<_GP_DPoint> >,std::allocator<std::vector<_GP_DPoint,std::allocator<_GP_DPoint> > > >(const std::allocator<std::vector<_GP_DPoint,std::allocator<_GP_DPoint> > > &)'
+GP_BaseTools.cpp
+c:\workspace\testgbuffer130714\testgbuffer\gp_commontype.h(159) : warning C4244: 'initializing' : conversion from 'long' to 'unsigned short', possible loss of data
+c:\workspace\testgbuffer130714\testgbuffer\gp_commontype.h(170) : warning C4244: 'initializing' : conversion from 'long' to 'unsigned short', possible loss of data
+c:\workspace\testgbuffer130714\testgbuffer\gp_basetools.cpp(30) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+c:\workspace\testgbuffer130714\testgbuffer\gp_basetools.cpp(126) : warning C4244: '=' : conversion from '__int64' to 'int', possible loss of data
+c:\workspace\testgbuffer130714\testgbuffer\gp_basetools.cpp(127) : warning C4244: '=' : conversion from '__int64' to 'int', possible loss of data
+c:\workspace\testgbuffer130714\testgbuffer\gp_basetools.cpp(185) : warning C4244: '=' : conversion from '__int64' to 'int', possible loss of data
+c:\workspace\testgbuffer130714\testgbuffer\gp_basetools.cpp(186) : warning C4244: '=' : conversion from '__int64' to 'int', possible loss of data
+GP_BitMap.cpp
+c:\workspace\testgbuffer130714\testgbuffer\gp_commontype.h(159) : warning C4244: 'initializing' : conversion from 'long' to 'unsigned short', possible loss of data
+c:\workspace\testgbuffer130714\testgbuffer\gp_commontype.h(170) : warning C4244: 'initializing' : conversion from 'long' to 'unsigned short', possible loss of data
+GP_Dir.cpp
+GP_Document.cpp
+GP_DrawingArea.cpp
+c:\workspace\testgbuffer130714\testgbuffer\gp_commontype.h(159) : warning C4244: 'initializing' : conversion from 'long' to 'unsigned short', possible loss of data
+c:\workspace\testgbuffer130714\testgbuffer\gp_commontype.h(170) : warning C4244: 'initializing' : conversion from 'long' to 'unsigned short', possible loss of data
+c:\workspace\testgbuffer130714\testgbuffer\gp_drawingarea.cpp(105) : warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+c:\workspace\testgbuffer130714\testgbuffer\gp_drawingarea.cpp(112) : warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+c:\workspace\testgbuffer130714\testgbuffer\gp_drawingarea.cpp(123) : warning C4244: '=' : conversion from 'float' to '__int64', possible loss of data
+c:\workspace\testgbuffer130714\testgbuffer\gp_drawingarea.cpp(125) : warning C4244: '=' : conversion from 'float' to '__int64', possible loss of data
+c:\workspace\testgbuffer130714\testgbuffer\gp_drawingarea.cpp(176) : warning C4244: '/=' : conversion from 'float' to 'int', possible loss of data
+c:\workspace\testgbuffer130714\testgbuffer\gp_drawingarea.cpp(177) : warning C4244: '/=' : conversion from 'float' to 'int', possible loss of data
+c:\workspace\testgbuffer130714\testgbuffer\gp_drawingarea.cpp(187) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+c:\workspace\testgbuffer130714\testgbuffer\gp_drawingarea.cpp(188) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+c:\workspace\testgbuffer130714\testgbuffer\gp_drawingarea.cpp(189) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+c:\workspace\testgbuffer130714\testgbuffer\gp_drawingarea.cpp(190) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+c:\workspace\testgbuffer130714\testgbuffer\gp_drawingarea.cpp(194) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+c:\workspace\testgbuffer130714\testgbuffer\gp_drawingarea.cpp(195) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+c:\workspace\testgbuffer130714\testgbuffer\gp_drawingarea.cpp(199) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+c:\workspace\testgbuffer130714\testgbuffer\gp_drawingarea.cpp(200) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+c:\workspace\testgbuffer130714\testgbuffer\gp_drawingarea.cpp(201) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+c:\workspace\testgbuffer130714\testgbuffer\gp_drawingarea.cpp(202) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+c:\workspace\testgbuffer130714\testgbuffer\gp_drawingarea.cpp(216) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+c:\workspace\testgbuffer130714\testgbuffer\gp_drawingarea.cpp(217) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+GP_File.cpp
+GP_Node.cpp
+GP_PixelBuffer.cpp
+c:\workspace\testgbuffer130714\testgbuffer\gp_commontype.h(159) : warning C4244: 'initializing' : conversion from 'long' to 'unsigned short', possible loss of data
+c:\workspace\testgbuffer130714\testgbuffer\gp_commontype.h(170) : warning C4244: 'initializing' : conversion from 'long' to 'unsigned short', possible loss of data
+GP_PixelDrawer.cpp
+c:\workspace\testgbuffer130714\testgbuffer\gp_commontype.h(159) : warning C4244: 'initializing' : conversion from 'long' to 'unsigned short', possible loss of data
+c:\workspace\testgbuffer130714\testgbuffer\gp_commontype.h(170) : warning C4244: 'initializing' : conversion from 'long' to 'unsigned short', possible loss of data
+c:\program files (x86)\microsoft visual studio\vc98\include\xtree(200) : warning C4786: '?rbegin@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@QAE?AV?$reverse_bidirectional_iterator@Viterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@U?$pair@QBDUTimeRound@@@3@AAU43@PAU43@H@2@XZ' : identifier was truncated to '255' characters in the browser information
+        c:\program files (x86)\microsoft visual studio\vc98\include\map(46) : see reference to class template instantiation 'std::_Tree<char const *,struct std::pair<char const * const,struct TimeRound>,struct std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >::_Kfn,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+        c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(38) : see reference to class template instantiation 'std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\xtree(202) : warning C4786: '?rbegin@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@QBE?AV?$reverse_bidirectional_iterator@Vconst_iterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@U?$pair@QBDUTimeRound@@@3@ABU43@PBU43@H@2@XZ' : identifier was truncated to '255' characters in the browser information
+        c:\program files (x86)\microsoft visual studio\vc98\include\map(46) : see reference to class template instantiation 'std::_Tree<char const *,struct std::pair<char const * const,struct TimeRound>,struct std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >::_Kfn,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+        c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(38) : see reference to class template instantiation 'std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\xtree(204) : warning C4786: '?rend@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@QAE?AV?$reverse_bidirectional_iterator@Viterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@U?$pair@QBDUTimeRound@@@3@AAU43@PAU43@H@2@XZ' : identifier was truncated to '255' characters in the browser information
+        c:\program files (x86)\microsoft visual studio\vc98\include\map(46) : see reference to class template instantiation 'std::_Tree<char const *,struct std::pair<char const * const,struct TimeRound>,struct std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >::_Kfn,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+        c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(38) : see reference to class template instantiation 'std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\xtree(206) : warning C4786: '?rend@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@QBE?AV?$reverse_bidirectional_iterator@Vconst_iterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@U?$pair@QBDUTimeRound@@@3@ABU43@PBU43@H@2@XZ' : identifier was truncated to '255' characters in the browser information
+        c:\program files (x86)\microsoft visual studio\vc98\include\map(46) : see reference to class template instantiation 'std::_Tree<char const *,struct std::pair<char const * const,struct TimeRound>,struct std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >::_Kfn,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+        c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(38) : see reference to class template instantiation 'std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\xtree(237) : warning C4786: '?insert@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@QAE?AU?$pair@Viterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@_N@2@ABU?$pair@QBDUTimeRound@@@2@@Z' : identifier was truncated to '255' characters in the browser information
+        c:\program files (x86)\microsoft visual studio\vc98\include\map(46) : see reference to class template instantiation 'std::_Tree<char const *,struct std::pair<char const * const,struct TimeRound>,struct std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >::_Kfn,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+        c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(38) : see reference to class template instantiation 'std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\xtree(411) : warning C4786: '?equal_range@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@QAE?AU?$pair@Viterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@V123@@2@ABQBD@Z' : identifier was truncated to '255' characters in the browser information
+        c:\program files (x86)\microsoft visual studio\vc98\include\map(46) : see reference to class template instantiation 'std::_Tree<char const *,struct std::pair<char const * const,struct TimeRound>,struct std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >::_Kfn,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+        c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(38) : see reference to class template instantiation 'std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\xtree(414) : warning C4786: '?equal_range@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@QBE?AU?$pair@Vconst_iterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@V123@@2@ABQBD@Z' : identifier was truncated to '255' characters in the browser information
+        c:\program files (x86)\microsoft visual studio\vc98\include\map(46) : see reference to class template instantiation 'std::_Tree<char const *,struct std::pair<char const * const,struct TimeRound>,struct std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >::_Kfn,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+        c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(38) : see reference to class template instantiation 'std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\map(79) : warning C4786: '?rbegin@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@std@@QAE?AV?$reverse_bidirectional_iterator@Viterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@U?$pair@QBDUTimeRound@@@3@AAU43@PAU43@H@2@XZ' : identifier was truncated to '255' characters in the browser information
+        c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(38) : see reference to class template instantiation 'std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\map(81) : warning C4786: '?rbegin@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@std@@QBE?AV?$reverse_bidirectional_iterator@Vconst_iterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@U?$pair@QBDUTimeRound@@@3@ABU43@PBU43@H@2@XZ' : identifier was truncated to '255' characters in the browser information
+        c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(38) : see reference to class template instantiation 'std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\map(83) : warning C4786: '?rend@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@std@@QAE?AV?$reverse_bidirectional_iterator@Viterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@U?$pair@QBDUTimeRound@@@3@AAU43@PAU43@H@2@XZ' : identifier was truncated to '255' characters in the browser information
+        c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(38) : see reference to class template instantiation 'std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\map(85) : warning C4786: '?rend@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@std@@QBE?AV?$reverse_bidirectional_iterator@Vconst_iterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@U?$pair@QBDUTimeRound@@@3@ABU43@PBU43@H@2@XZ' : identifier was truncated to '255' characters in the browser information
+        c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(38) : see reference to class template instantiation 'std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\map(98) : warning C4786: '?insert@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@std@@QAE?AU?$pair@Viterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@_N@2@ABU?$pair@QBDUTimeRound@@@2@@Z' : identifier was truncated to '255' characters in the browser information
+        c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(38) : see reference to class template instantiation 'std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\map(100) : warning C4786: '?insert@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@std@@QAE?AViterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@2@V342@ABU?$pair@QBDUTimeRound@@@2@@Z' : identifier was truncated to '255' characters in the browser information
+        c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(38) : see reference to class template instantiation 'std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\map(136) : warning C4786: '?equal_range@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@std@@QAE?AU?$pair@Viterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@V123@@2@ABQBD@Z' : identifier was truncated to '255' characters in the browser information
+        c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(38) : see reference to class template instantiation 'std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\map(139) : warning C4786: '?equal_range@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@std@@QBE?AU?$pair@Vconst_iterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@V123@@2@ABQBD@Z' : identifier was truncated to '255' characters in the browser information
+        c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(38) : see reference to class template instantiation 'std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\utility(23) : warning C4786: '??0?$pair@Viterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@_N@std@@QAE@ABViterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@1@AB_N@Z' : identifier was truncated to '255' characters in the browser information
+        c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(49) : see reference to class template instantiation 'std::pair<class std::_Tree<char const *,struct std::pair<char const * const,struct TimeRound>,struct std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >::_Kfn,struct ltstr,class std::allocator<struct TimeRound> >::iterator,bool>' being compiled
+c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(51) : warning C4786: 'std::reverse_bidirectional_iterator<std::_Tree<char const *,std::pair<char const * const,TimeRound>,std::map<char const *,TimeRound,ltstr,std::allocator<TimeRound> >::_Kfn,ltstr,std::allocator<TimeRound> >::iterator,std::pair<char const * const,TimeRound>,std::pair<char const * const,TimeRound> &,std::pair<char const * const,TimeRound> *,int>' : identifier was truncated to '255' characters in the debug information
+c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(51) : warning C4786: 'std::reverse_bidirectional_iterator<std::_Tree<char const *,std::pair<char const * const,TimeRound>,std::map<char const *,TimeRound,ltstr,std::allocator<TimeRound> >::_Kfn,ltstr,std::allocator<TimeRound> >::const_iterator,std::pair<char const * const,TimeRound>,std::pair<char const * const,TimeRound> const &,std::pair<char const * const,TimeRound> const *,int>' : identifier was truncated to '255' characters in the debug information
+c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(51) : warning C4786: 'std::pair<std::_Tree<char const *,std::pair<char const * const,TimeRound>,std::map<char const *,TimeRound,ltstr,std::allocator<TimeRound> >::_Kfn,ltstr,std::allocator<TimeRound> >::iterator,std::_Tree<char const *,std::pair<char const * const,TimeRound>,std::map<char const *,TimeRound,ltstr,std::allocator<TimeRound> >::_Kfn,ltstr,std::allocator<TimeRound> >::iterator>' : identifier was truncated to '255' characters in the debug information
+c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(51) : warning C4786: 'std::pair<std::_Tree<char const *,std::pair<char const * const,TimeRound>,std::map<char const *,TimeRound,ltstr,std::allocator<TimeRound> >::_Kfn,ltstr,std::allocator<TimeRound> >::const_iterator,std::_Tree<char const *,std::pair<char const * const,TimeRound>,std::map<char const *,TimeRound,ltstr,std::allocator<TimeRound> >::_Kfn,ltstr,std::allocator<TimeRound> >::const_iterator>' : identifier was truncated to '255' characters in the debug information
+c:\workspace\testgbuffer130714\testgbuffer\gp_pixeldrawer.cpp(234) : warning C4554: '<<' : check operator precedence for possible error; use parentheses to clarify precedence
+c:\workspace\testgbuffer130714\testgbuffer\gp_pixeldrawer.cpp(181) : warning C4101: 'e' : unreferenced local variable
+c:\workspace\testgbuffer130714\testgbuffer\gp_pixeldrawer.cpp(181) : warning C4101: 'k' : unreferenced local variable
+c:\workspace\testgbuffer130714\testgbuffer\gp_pixeldrawer.cpp(367) : warning C4554: '<<' : check operator precedence for possible error; use parentheses to clarify precedence
+c:\workspace\testgbuffer130714\testgbuffer\gp_pixeldrawer.cpp(318) : warning C4101: 'e' : unreferenced local variable
+c:\workspace\testgbuffer130714\testgbuffer\gp_pixeldrawer.cpp(318) : warning C4101: 'k' : unreferenced local variable
+c:\workspace\testgbuffer130714\testgbuffer\gp_pixeldrawer.cpp(952) : warning C4101: 'result' : unreferenced local variable
+c:\workspace\testgbuffer130714\testgbuffer\gp_pixeldrawer.cpp(1235) : warning C4101: 'yi' : unreferenced local variable
+c:\workspace\testgbuffer130714\testgbuffer\gp_pixeldrawer.cpp(1265) : warning C4101: 'yi' : unreferenced local variable
+c:\workspace\testgbuffer130714\testgbuffer\gp_pixeldrawer.cpp(1674) : warning C4101: 'srcX' : unreferenced local variable
+c:\workspace\testgbuffer130714\testgbuffer\gp_pixeldrawer.cpp(1674) : warning C4101: 'srcY' : unreferenced local variable
+GP_Performance.cpp
+c:\program files (x86)\microsoft visual studio\vc98\include\xtree(200) : warning C4786: '?rbegin@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@QAE?AV?$reverse_bidirectional_iterator@Viterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@U?$pair@QBDUTimeRound@@@3@AAU43@PAU43@H@2@XZ' : identifier was truncated to '255' characters in the browser information
+        c:\program files (x86)\microsoft visual studio\vc98\include\map(46) : see reference to class template instantiation 'std::_Tree<char const *,struct std::pair<char const * const,struct TimeRound>,struct std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >::_Kfn,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+        c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(38) : see reference to class template instantiation 'std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\xtree(202) : warning C4786: '?rbegin@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@QBE?AV?$reverse_bidirectional_iterator@Vconst_iterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@U?$pair@QBDUTimeRound@@@3@ABU43@PBU43@H@2@XZ' : identifier was truncated to '255' characters in the browser information
+        c:\program files (x86)\microsoft visual studio\vc98\include\map(46) : see reference to class template instantiation 'std::_Tree<char const *,struct std::pair<char const * const,struct TimeRound>,struct std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >::_Kfn,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+        c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(38) : see reference to class template instantiation 'std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\xtree(204) : warning C4786: '?rend@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@QAE?AV?$reverse_bidirectional_iterator@Viterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@U?$pair@QBDUTimeRound@@@3@AAU43@PAU43@H@2@XZ' : identifier was truncated to '255' characters in the browser information
+        c:\program files (x86)\microsoft visual studio\vc98\include\map(46) : see reference to class template instantiation 'std::_Tree<char const *,struct std::pair<char const * const,struct TimeRound>,struct std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >::_Kfn,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+        c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(38) : see reference to class template instantiation 'std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\xtree(206) : warning C4786: '?rend@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@QBE?AV?$reverse_bidirectional_iterator@Vconst_iterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@U?$pair@QBDUTimeRound@@@3@ABU43@PBU43@H@2@XZ' : identifier was truncated to '255' characters in the browser information
+        c:\program files (x86)\microsoft visual studio\vc98\include\map(46) : see reference to class template instantiation 'std::_Tree<char const *,struct std::pair<char const * const,struct TimeRound>,struct std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >::_Kfn,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+        c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(38) : see reference to class template instantiation 'std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\xtree(237) : warning C4786: '?insert@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@QAE?AU?$pair@Viterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@_N@2@ABU?$pair@QBDUTimeRound@@@2@@Z' : identifier was truncated to '255' characters in the browser information
+        c:\program files (x86)\microsoft visual studio\vc98\include\map(46) : see reference to class template instantiation 'std::_Tree<char const *,struct std::pair<char const * const,struct TimeRound>,struct std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >::_Kfn,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+        c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(38) : see reference to class template instantiation 'std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\xtree(411) : warning C4786: '?equal_range@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@QAE?AU?$pair@Viterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@V123@@2@ABQBD@Z' : identifier was truncated to '255' characters in the browser information
+        c:\program files (x86)\microsoft visual studio\vc98\include\map(46) : see reference to class template instantiation 'std::_Tree<char const *,struct std::pair<char const * const,struct TimeRound>,struct std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >::_Kfn,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+        c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(38) : see reference to class template instantiation 'std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\xtree(414) : warning C4786: '?equal_range@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@QBE?AU?$pair@Vconst_iterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@V123@@2@ABQBD@Z' : identifier was truncated to '255' characters in the browser information
+        c:\program files (x86)\microsoft visual studio\vc98\include\map(46) : see reference to class template instantiation 'std::_Tree<char const *,struct std::pair<char const * const,struct TimeRound>,struct std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >::_Kfn,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+        c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(38) : see reference to class template instantiation 'std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\map(79) : warning C4786: '?rbegin@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@std@@QAE?AV?$reverse_bidirectional_iterator@Viterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@U?$pair@QBDUTimeRound@@@3@AAU43@PAU43@H@2@XZ' : identifier was truncated to '255' characters in the browser information
+        c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(38) : see reference to class template instantiation 'std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\map(81) : warning C4786: '?rbegin@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@std@@QBE?AV?$reverse_bidirectional_iterator@Vconst_iterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@U?$pair@QBDUTimeRound@@@3@ABU43@PBU43@H@2@XZ' : identifier was truncated to '255' characters in the browser information
+        c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(38) : see reference to class template instantiation 'std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\map(83) : warning C4786: '?rend@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@std@@QAE?AV?$reverse_bidirectional_iterator@Viterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@U?$pair@QBDUTimeRound@@@3@AAU43@PAU43@H@2@XZ' : identifier was truncated to '255' characters in the browser information
+        c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(38) : see reference to class template instantiation 'std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\map(85) : warning C4786: '?rend@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@std@@QBE?AV?$reverse_bidirectional_iterator@Vconst_iterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@U?$pair@QBDUTimeRound@@@3@ABU43@PBU43@H@2@XZ' : identifier was truncated to '255' characters in the browser information
+        c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(38) : see reference to class template instantiation 'std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\map(98) : warning C4786: '?insert@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@std@@QAE?AU?$pair@Viterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@_N@2@ABU?$pair@QBDUTimeRound@@@2@@Z' : identifier was truncated to '255' characters in the browser information
+        c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(38) : see reference to class template instantiation 'std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\map(100) : warning C4786: '?insert@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@std@@QAE?AViterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@2@V342@ABU?$pair@QBDUTimeRound@@@2@@Z' : identifier was truncated to '255' characters in the browser information
+        c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(38) : see reference to class template instantiation 'std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\map(136) : warning C4786: '?equal_range@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@std@@QAE?AU?$pair@Viterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@V123@@2@ABQBD@Z' : identifier was truncated to '255' characters in the browser information
+        c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(38) : see reference to class template instantiation 'std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\map(139) : warning C4786: '?equal_range@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@std@@QBE?AU?$pair@Vconst_iterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@V123@@2@ABQBD@Z' : identifier was truncated to '255' characters in the browser information
+        c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(38) : see reference to class template instantiation 'std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >' being compiled
+c:\program files (x86)\microsoft visual studio\vc98\include\utility(23) : warning C4786: '??0?$pair@Viterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@_N@std@@QAE@ABViterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@1@AB_N@Z' : identifier was truncated to '255' characters in the browser information
+        c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(49) : see reference to class template instantiation 'std::pair<class std::_Tree<char const *,struct std::pair<char const * const,struct TimeRound>,struct std::map<char const *,struct TimeRound,struct ltstr,class std::allocator<struct TimeRound> >::_Kfn,struct ltstr,class std::allocator<struct TimeRound> >::iterator,bool>' being compiled
+c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(51) : warning C4786: 'std::reverse_bidirectional_iterator<std::_Tree<char const *,std::pair<char const * const,TimeRound>,std::map<char const *,TimeRound,ltstr,std::allocator<TimeRound> >::_Kfn,ltstr,std::allocator<TimeRound> >::iterator,std::pair<char const * const,TimeRound>,std::pair<char const * const,TimeRound> &,std::pair<char const * const,TimeRound> *,int>' : identifier was truncated to '255' characters in the debug information
+c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(51) : warning C4786: 'std::reverse_bidirectional_iterator<std::_Tree<char const *,std::pair<char const * const,TimeRound>,std::map<char const *,TimeRound,ltstr,std::allocator<TimeRound> >::_Kfn,ltstr,std::allocator<TimeRound> >::const_iterator,std::pair<char const * const,TimeRound>,std::pair<char const * const,TimeRound> const &,std::pair<char const * const,TimeRound> const *,int>' : identifier was truncated to '255' characters in the debug information
+c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(51) : warning C4786: 'std::pair<std::_Tree<char const *,std::pair<char const * const,TimeRound>,std::map<char const *,TimeRound,ltstr,std::allocator<TimeRound> >::_Kfn,ltstr,std::allocator<TimeRound> >::iterator,std::_Tree<char const *,std::pair<char const * const,TimeRound>,std::map<char const *,TimeRound,ltstr,std::allocator<TimeRound> >::_Kfn,ltstr,std::allocator<TimeRound> >::iterator>' : identifier was truncated to '255' characters in the debug information
+c:\workspace\testgbuffer130714\testgbuffer\gp_performance.h(51) : warning C4786: 'std::pair<std::_Tree<char const *,std::pair<char const * const,TimeRound>,std::map<char const *,TimeRound,ltstr,std::allocator<TimeRound> >::_Kfn,ltstr,std::allocator<TimeRound> >::const_iterator,std::_Tree<char const *,std::pair<char const * const,TimeRound>,std::map<char const *,TimeRound,ltstr,std::allocator<TimeRound> >::_Kfn,ltstr,std::allocator<TimeRound> >::const_iterator>' : identifier was truncated to '255' characters in the debug information
+GP_Time.cpp
+Generating Code...
+c:\program files (x86)\microsoft visual studio\vc98\include\xtree(182) : warning C4786: 'std::_Tree<char const *,std::pair<char const * const,TimeRound>,std::map<char const *,TimeRound,ltstr,std::allocator<TimeRound> >::_Kfn,ltstr,std::allocator<TimeRound> >::~_Tree<char const *,std::pair<char const * const,TimeRound>,std::map<char const *,TimeRound,ltstr,std::allocator<TimeRound> >::_Kfn,ltstr,std::allocator<TimeRound> >' : identifier was truncated to '255' characters in the debug information
+c:\program files (x86)\microsoft visual studio\vc98\include\xtree(162) : warning C4786: 'std::_Tree<char const *,std::pair<char const * const,TimeRound>,std::map<char const *,TimeRound,ltstr,std::allocator<TimeRound> >::_Kfn,ltstr,std::allocator<TimeRound> >::_Tree<char const *,std::pair<char const * const,TimeRound>,std::map<char const *,TimeRound,ltstr,std::allocator<TimeRound> >::_Kfn,ltstr,std::allocator<TimeRound> >' : identifier was truncated to '255' characters in the debug information
+c:\workspace\testgbuffer130714\testgbuffer\gp_pixeldrawer.cpp(1285) : warning C4715: 'GP_PixelDrawer::FillCircle' : not all control paths return a value
+c:\program files (x86)\microsoft visual studio\vc98\include\xtree(236) : warning C4786: '__ehhandler$?insert@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@QAE?AU?$pair@Viterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@_N@2@ABU?$pair@QBDUTimeRound@@@2@@Z' : identifier was truncated to '255' characters in the debug information
+c:\program files (x86)\microsoft visual studio\vc98\include\xtree(236) : warning C4786: '__unwindfunclet$?insert@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@QAE?AU?$pair@Viterator@?$_Tree@PBDU?$pair@QBDUTimeRound@@@std@@U_Kfn@?$map@PBDUTimeRound@@Ultstr@@V?$allocator@UTimeRound@@@std@@@2@Ultstr@@V?$allocator@UTimeRound@@@2@@std@@_N@2@ABU?$pair@QBDUTimeRound@@@2@@Z$0' : identifier was truncated to '255' characters in the debug information
+c:\program files (x86)\microsoft visual studio\vc98\include\utility(21) : warning C4786: 'std::pair<std::_Tree<char const *,std::pair<char const * const,TimeRound>,std::map<char const *,TimeRound,ltstr,std::allocator<TimeRound> >::_Kfn,ltstr,std::allocator<TimeRound> >::iterator,bool>::pair<std::_Tree<char const *,std::pair<char const * const,TimeRound>,std::map<char const *,TimeRound,ltstr,std::allocator<TimeRound> >::_Kfn,ltstr,std::allocator<TimeRound> >::iterator,bool>' : identifier was truncated to '255' characters in the debug information
+c:\program files (x86)\microsoft visual studio\vc98\include\vector(39) : warning C4786: 'std::vector<std::vector<_GP_DPoint,std::allocator<_GP_DPoint> >,std::allocator<std::vector<_GP_DPoint,std::allocator<_GP_DPoint> > > >::vector<std::vector<_GP_DPoint,std::allocator<_GP_DPoint> >,std::allocator<std::vector<_GP_DPoint,std::allocator<_GP_DPoint> > > >' : identifier was truncated to '255' characters in the debug information
+c:\program files (x86)\microsoft visual studio\vc98\include\vector(60) : warning C4786: 'std::vector<std::vector<_GP_DPoint,std::allocator<_GP_DPoint> >,std::allocator<std::vector<_GP_DPoint,std::allocator<_GP_DPoint> > > >::~vector<std::vector<_GP_DPoint,std::allocator<_GP_DPoint> >,std::allocator<std::vector<_GP_DPoint,std::allocator<_GP_DPoint> > > >' : identifier was truncated to '255' characters in the debug information
+c:\program files (x86)\microsoft visual studio\vc98\include\vector(39) : warning C4786: 'std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >' : identifier was truncated to '255' characters in the debug information
+c:\program files (x86)\microsoft visual studio\vc98\include\vector(52) : warning C4786: 'std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >' : identifier was truncated to '255' characters in the debug information
+c:\program files (x86)\microsoft visual studio\vc98\include\vector(60) : warning C4786: 'std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::~vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >' : identifier was truncated to '255' characters in the debug information
+Compiling...
+adler32.c
+deflate.c
+inffast.c
+inflate.c
+inftrees.c
+trees.c
+zutil.c
+Generating Code...
+Compiling...
+blockset.cpp
+c:\workspace\testgbuffer130714\testgbuffer\pico\blockset.cpp(9) : warning C4800: 'struct giseHashTable::Entry *' : forcing value to bool 'true' or 'false' (performance warning)
+cache.cpp
+c:\workspace\testgbuffer130714\testgbuffer\pico\cache.cpp(42) : warning C4355: 'this' : used in base member initializer list
+c:\workspace\testgbuffer130714\testgbuffer\pico\cache.cpp(65) : warning C4244: '=' : conversion from '__int64' to 'int', possible loss of data
+cacheentry.cpp
+compress.cpp
+dir.cpp
+diriterator.cpp
+file.cpp
+c:\workspace\testgbuffer130714\testgbuffer\pico\file.cpp(69) : warning C4244: 'initializing' : conversion from '__int64' to 'int', possible loss of data
+c:\workspace\testgbuffer130714\testgbuffer\pico\file.cpp(70) : warning C4244: 'initializing' : conversion from '__int64' to 'int', possible loss of data
+c:\workspace\testgbuffer130714\testgbuffer\pico\file.cpp(89) : warning C4244: 'initializing' : conversion from '__int64' to 'int', possible loss of data
+c:\workspace\testgbuffer130714\testgbuffer\pico\file.cpp(90) : warning C4244: 'initializing' : conversion from '__int64' to 'int', possible loss of data
+c:\workspace\testgbuffer130714\testgbuffer\pico\file.cpp(105) : warning C4244: '=' : conversion from '__int64' to 'int', possible loss of data
+c:\workspace\testgbuffer130714\testgbuffer\pico\file.cpp(147) : warning C4244: 'initializing' : conversion from '__int64' to 'int', possible loss of data
+c:\workspace\testgbuffer130714\testgbuffer\pico\file.cpp(148) : warning C4244: 'initializing' : conversion from '__int64' to 'int', possible loss of data
+c:\workspace\testgbuffer130714\testgbuffer\pico\file.cpp(155) : warning C4244: 'initializing' : conversion from '__int64' to 'int', possible loss of data
+freespace.cpp
+c:\workspace\testgbuffer130714\testgbuffer\pico\freespace.cpp(30) : warning C4244: 'argument' : conversion from '__int64' to 'int', possible loss of data
+gen.cpp
+c:\workspace\testgbuffer130714\testgbuffer\pico\gen.cpp(37) : warning C4244: '=' : conversion from '__int64' to 'unsigned char', possible loss of data
+c:\workspace\testgbuffer130714\testgbuffer\pico\gen.cpp(42) : warning C4244: 'argument' : conversion from '__int64' to 'unsigned int', possible loss of data
+c:\workspace\testgbuffer130714\testgbuffer\pico\gen.cpp(43) : warning C4244: 'argument' : conversion from '__int64' to 'unsigned int', possible loss of data
+hashtable.cpp
+log.cpp
+lru.cpp
+os.cpp
+c:\workspace\testgbuffer130714\testgbuffer\pico\os_win.cpp(142) : warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+c:\workspace\testgbuffer130714\testgbuffer\pico\os_win.cpp(169) : warning C4244: '=' : conversion from '__int64' to 'unsigned long', possible loss of data
+c:\workspace\testgbuffer130714\testgbuffer\pico\os_win.cpp(170) : warning C4244: '=' : conversion from '__int64' to 'unsigned long', possible loss of data
+c:\workspace\testgbuffer130714\testgbuffer\pico\os_win.cpp(186) : warning C4244: '=' : conversion from '__int64' to 'unsigned long', possible loss of data
+c:\workspace\testgbuffer130714\testgbuffer\pico\os_win.cpp(187) : warning C4244: '=' : conversion from '__int64' to 'unsigned long', possible loss of data
+c:\workspace\testgbuffer130714\testgbuffer\pico\os_win.cpp(189) : warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+c:\workspace\testgbuffer130714\testgbuffer\pico\os_win.cpp(206) : warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+c:\workspace\testgbuffer130714\testgbuffer\pico\os_win.cpp(215) : warning C4244: '=' : conversion from '__int64' to 'unsigned long', possible loss of data
+c:\workspace\testgbuffer130714\testgbuffer\pico\os_win.cpp(216) : warning C4244: '=' : conversion from 'unsigned __int64' to 'unsigned long', possible loss of data
+osdir.cpp
+osfile.cpp
+picostorage.cpp
+slices.cpp
+storageparams.cpp
+c:\workspace\testgbuffer130714\testgbuffer\pico\storageparams.cpp(37) : warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+c:\workspace\testgbuffer130714\testgbuffer\pico\storageparams.cpp(38) : warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+c:\workspace\testgbuffer130714\testgbuffer\pico\storageparams.cpp(40) : warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+Generating Code...
+Linking...
+   Creating library C:\temp\GBuffer\obj\testGBuffer\Debug/testGBufferd.lib and object C:\temp\GBuffer\obj\testGBuffer\Debug/testGBufferd.exp
+Creating temporary file "C:\Users\lindubin\AppData\Local\Temp\RSPB9F2.tmp" with contents
+[
+/nologo /o"C:\temp\GBuffer\obj\testGBuffer\Debug/testGBuffer.bsc" 
+\temp\GBuffer\obj\testGBuffer\Debug\StdAfx.sbr
+\temp\GBuffer\obj\testGBuffer\Debug\bmpfile.sbr
+\temp\GBuffer\obj\testGBuffer\Debug\MainFrm.sbr
+\temp\GBuffer\obj\testGBuffer\Debug\RoadFindSelDlg.sbr
+\temp\GBuffer\obj\testGBuffer\Debug\testGBuffer.sbr
+\temp\GBuffer\obj\testGBuffer\Debug\testGBufferDoc.sbr
+\temp\GBuffer\obj\testGBuffer\Debug\testGBufferView.sbr
+\temp\GBuffer\obj\testGBuffer\Debug\GP_BaseTools.sbr
+\temp\GBuffer\obj\testGBuffer\Debug\GP_BitMap.sbr
+\temp\GBuffer\obj\testGBuffer\Debug\GP_Dir.sbr
+\temp\GBuffer\obj\testGBuffer\Debug\GP_Document.sbr
+\temp\GBuffer\obj\testGBuffer\Debug\GP_DrawingArea.sbr
+\temp\GBuffer\obj\testGBuffer\Debug\GP_File.sbr
+\temp\GBuffer\obj\testGBuffer\Debug\GP_Node.sbr
+\temp\GBuffer\obj\testGBuffer\Debug\GP_PixelBuffer.sbr
+\temp\GBuffer\obj\testGBuffer\Debug\GP_PixelDrawer.sbr
+\temp\GBuffer\obj\testGBuffer\Debug\GP_Performance.sbr
+\temp\GBuffer\obj\testGBuffer\Debug\GP_Time.sbr
+\temp\GBuffer\obj\testGBuffer\Debug\adler32.sbr
+\temp\GBuffer\obj\testGBuffer\Debug\deflate.sbr
+\temp\GBuffer\obj\testGBuffer\Debug\inffast.sbr
+\temp\GBuffer\obj\testGBuffer\Debug\inflate.sbr
+\temp\GBuffer\obj\testGBuffer\Debug\inftrees.sbr
+\temp\GBuffer\obj\testGBuffer\Debug\trees.sbr
+\temp\GBuffer\obj\testGBuffer\Debug\zutil.sbr
+\temp\GBuffer\obj\testGBuffer\Debug\blockset.sbr
+\temp\GBuffer\obj\testGBuffer\Debug\cache.sbr
+\temp\GBuffer\obj\testGBuffer\Debug\cacheentry.sbr
+\temp\GBuffer\obj\testGBuffer\Debug\compress.sbr
+\temp\GBuffer\obj\testGBuffer\Debug\dir.sbr
+\temp\GBuffer\obj\testGBuffer\Debug\diriterator.sbr
+\temp\GBuffer\obj\testGBuffer\Debug\file.sbr
+\temp\GBuffer\obj\testGBuffer\Debug\freespace.sbr
+\temp\GBuffer\obj\testGBuffer\Debug\gen.sbr
+\temp\GBuffer\obj\testGBuffer\Debug\hashtable.sbr
+\temp\GBuffer\obj\testGBuffer\Debug\log.sbr
+\temp\GBuffer\obj\testGBuffer\Debug\lru.sbr
+\temp\GBuffer\obj\testGBuffer\Debug\os.sbr
+\temp\GBuffer\obj\testGBuffer\Debug\osdir.sbr
+\temp\GBuffer\obj\testGBuffer\Debug\osfile.sbr
+\temp\GBuffer\obj\testGBuffer\Debug\picostorage.sbr
+\temp\GBuffer\obj\testGBuffer\Debug\slices.sbr
+\temp\GBuffer\obj\testGBuffer\Debug\storageparams.sbr]
+Creating command line "bscmake.exe @C:\Users\lindubin\AppData\Local\Temp\RSPB9F2.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+Creating temporary file "C:\Users\lindubin\AppData\Local\Temp\RSPBC43.bat" with contents
+[
+@echo off
+copy "C:\temp\GBuffer\obj\testGBuffer\Debug\testGBufferd.exe" "C:\temp\GBuffer\bin\testGBufferd.exe"
+]
+Creating command line "C:\Users\lindubin\AppData\Local\Temp\RSPBC43.bat"
+
+已复制         1 个文件。
+
+
+
+<h3>Results</h3>
+testGBufferd.exe - 0 error(s), 180 warning(s)
+</pre>
+</body>
+</html>
