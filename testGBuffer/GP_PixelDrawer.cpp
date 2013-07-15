@@ -1503,15 +1503,15 @@ GP_Status GP_PixelDrawer::FSBitMap2(){
 	delete[] ppBit1;
 	return Ok; 
 #else
-	int iR = h0/2;	//Բ�뾶
-	int iX0 = w0/2;
-	int iY0 = h0/2;
+	int iR = h0/2-1;	//Բ�뾶
+	int iX0 = w0/2-1;
+	int iY0 = h0/2-1;
 	for (int i = 0;i < h0; i++)
 	{
 		for (int j = 0 ;j < w0; j++)
 		{
 			double y = sqrt(pow(double(j-iX0),2)+pow(double(i-iY0),2))*2;
-			double x = w0*acos(double(j-iX0)*2/y)/GP_PAI; 
+			double x = (w0-1)*acos(double(j-iX0)*2/y)/GP_PAI; 
 			if ((int)x<0||(int)x>=w0||(int)y<0||(int)y>=h0)
 			{
 				continue;

@@ -2493,7 +2493,7 @@ void CTestGBufferView::OnIdArea1200()
 
 void CTestGBufferView::OnIdDrbmp() 
 {
-	const TCHAR filter[] = _T("BMPλͼ(*.bmp)");
+	const TCHAR filter[] = _T("BMPλͼ(*.*)");
 	
 	CFileDialog dlg(TRUE,_T("*.bmp"),NULL,OFN_FILEMUSTEXIST,filter,this);
 	if (dlg.DoModal() != IDOK)
