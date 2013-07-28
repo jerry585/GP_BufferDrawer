@@ -313,7 +313,7 @@ GP_Status GP_PixelDrawer::DrawLine(int x1,int y1,int x2,int y2,GP_Color& color,i
 	{
 		return Failed;
 	}
-	RGB555 cl = color.Get555Value();
+	RGB555 cl = color.Get565Value();
 	BYTE alpha = color.GetAlpha();
 	if(width==1)
 	{
