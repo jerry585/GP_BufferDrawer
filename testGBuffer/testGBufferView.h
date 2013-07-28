@@ -178,6 +178,7 @@ protected:
 	afx_msg void OnIdArea768();
 	afx_msg void OnIdArea1200();
 	afx_msg void OnIdDrbmp();
+	afx_msg BOOL OnMouseWheel(UINT nFlags, short zDelta, CPoint pt);
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 

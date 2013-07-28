@@ -15,7 +15,8 @@ GP_PixelDrawer::GP_PixelDrawer(GP_PixelBuffer* pbuffer){
 
 	table = new int[m_buffer_h];
 	memset(table,0,sizeof(int)*m_buffer_h);
-	for (int i = 0; i < m_buffer_h ; i++)
+	int i = 0;
+	for (i = 0; i < m_buffer_h ; i++)
 	{
 		table[i] = ((i*m_buffer_w)<<1);
 	}
@@ -312,119 +313,201 @@ GP_Status GP_PixelDrawer::DrawLine(int x1,int y1,int x2,int y2,GP_Color& color,i
 	{
 		return Failed;
 	}
-
-	int x,y,dx,dy;
-	int p,same,change;
-	float k,e;
-	dx = x2-x1;
-	dy = y2-y1;
-
 	RGB555 cl = color.Get555Value();
-	if (dx == 0) 
+	BYTE alpha = color.GetAlpha();
+	if(width==1)
 	{
-		if (dy<0)
-		{
-			swap(&y1,&y2);
-		}
-		x = x1;
-		y = y1;
-		for (;y<=y2;y++)
-		{
-			DrawPixel(x,y,cl);
-		}
-		return Ok;
-	}
+		int x,y,dx,dy;
+		int p,same,change;
+		float k,e;
+		dx = x2-x1;
+		dy = y2-y1;
 
-	if(x1>x2)
-	{
-		swap(&x1,&x2);
-		swap(&y1,&y2);
-	}
+		//RGB555 cl = color.Get555Value();
+		if (dx == 0) 
+		{
+			if (dy<0)
+			{
+				swap(&y1,&y2);
+			}
+			x = x1;
+			y = y1;
+			for (;y<=y2;y++)
+			{
+				DrawPixel(x,y,cl,alpha);
+			}
+			return Ok;
+		}
 
-	dx=x2-x1;
-	dy=y2-y1;
-	
-	if(0<=dy&&dy<=dx)
-	{
-		p=(dy<<1)-dx;same=dy<<1;change=(dy-dx)<<1;x=x1;y=y1;
-		for(;x<=x2;x++)
-		{
-			DrawPixel(x,y,cl);
-			if(p<0)
-			{
-				p+=same;
-			}
-			else
-			{
-				p+=change;
-				y++;
-			}
-		}
-		return Ok;
-	}
-	else if(-dx<=dy&&dy<0)
-	{
-		p=-dx-dy<<1;same=-dy<<1;change=(-dy-dx)<<1;x=x1;y=y1;
-		for(;x<=x2;x++)
-		{
-			DrawPixel(x,y,cl);
-			if(p<0)
-				p+=same;
-			else
-			{
-				p+=change;
-				y--;
-			}
-		}
-		return Ok;
-	}
-	else if(dx<dy)
-	{
-		if(y1>y2)
+		if(x1>x2)
 		{
 			swap(&x1,&x2);
 			swap(&y1,&y2);
 		}
+
 		dx=x2-x1;
 		dy=y2-y1;
-		p=(dx<<1)-dy;same=dx<<1;change=(dx-dy)<<1;x=x1;y=y1;
-		for(;y<=y2;y++)
+		
+		if(0<=dy&&dy<=dx)
 		{
-			DrawPixel(x,y,cl);
-			if(p<0)
-				p+=same;
-			else
+			p=(dy<<1)-dx;same=dy<<1;change=(dy-dx)<<1;x=x1;y=y1;
+			for(;x<=x2;x++)
 			{
-				p+=change;
-				x++;
+				DrawPixel(x,y,cl,alpha);
+				if(p<0)
+				{
+					p+=same;
+				}
+				else
+				{
+					p+=change;
+					y++;
+				}
 			}
+			return Ok;
 		}
-		return Ok;
+		else if(-dx<=dy&&dy<0)
+		{
+			p=-dx-dy<<1;same=-dy<<1;change=(-dy-dx)<<1;x=x1;y=y1;
+			for(;x<=x2;x++)
+			{
+				DrawPixel(x,y,cl,alpha);
+				if(p<0)
+					p+=same;
+				else
+				{
+					p+=change;
+					y--;
+				}
+			}
+			return Ok;
+		}
+		else if(dx<dy)
+		{
+			if(y1>y2)
+			{
+				swap(&x1,&x2);
+				swap(&y1,&y2);
+			}
+			dx=x2-x1;
+			dy=y2-y1;
+			p=(dx<<1)-dy;same=dx<<1;change=(dx-dy)<<1;x=x1;y=y1;
+			for(;y<=y2;y++)
+			{
+				DrawPixel(x,y,cl,alpha);
+				if(p<0)
+					p+=same;
+				else
+				{
+					p+=change;
+					x++;
+				}
+			}
+			return Ok;
+		}
+		else
+		{
+			if(y1>y2)
+			{
+				swap(&x1,&x2);
+				swap(&y1,&y2);
+			}
+			dx=x2-x1;
+			dy=y2-y1;
+			p=-(dx<<1)-dy,same=-(dx<<1),change=-((dx+dy)<<1),x=x1,y=y1;
+			for(;y<=y2;y++)
+			{
+				DrawPixel(x,y,cl,alpha);
+				if(p<0)
+					p+=same;
+				else
+				{
+					p+=change;
+					x--;
+				}
+			}
+			return Ok;
+		}
+		return Ok; 
+	}
+	else if(width>1&&width%2==0)
+	{
+		if(y1 == y2)
+		{
+			int y11=y1,y12=y1;
+			int iAdd1 = (width-1)/2;
+			y11-=iAdd1;y12+=iAdd1;
+			for(int k = y11;k<=y12;k++)
+				DrawLine(x1,k,x2,k,color);   
+//			DrawLine(x1,k,x2,k,color); 
+			GP_Color color2(100,color.GetRed(),color.GetGreen(),color.GetBlue());
+			DrawLine(x1,y11-1,x2,y11-1,color2);
+			DrawLine(x1,y12+1,x2,y12+1,color2);  
+		}
+		else if(x1 == x2)
+		{
+			int x11=x1,x12=x1;
+			int iAdd1 = (width-1)/2;
+			x11-=iAdd1;x12+=iAdd1;
+			for(int k = x11;k<=x12;k++)
+				DrawLine(k,y1,k,y2,color);
+// 			DrawLine(k,y1,k,y2,color);
+			GP_Color color2(100,color.GetRed(),color.GetGreen(),color.GetBlue());
+			DrawLine(x11-1,y1,x11-1,y2,color2);
+			DrawLine(x12+1,y1,x12+1,y2,color2);
+		}
+		else
+		{
+			double ddy = (double)width/(2.0*sqrt((double)(1+((y2-y1)*(y2-y1))/((x2-x1)*(x2-x1)))));
+			double ddx = abs(ddy*(y2-y1)/(x2-x1));
+			//ddy = (int)ddy; ddx = (int)ddx;
+// 			printf("\nOOO***************\n%f-%f\n",ddx,ddy);
+			GP_Point ptlst[4] = {GP_Point((x1-ddx),(y1+ddy)),GP_Point((x1+ddx),(y1-ddy))
+				,GP_Point((x2+ddx),(y2-ddy)),GP_Point((x2-ddx),(y2+ddy))}; 
+			ddy+=0.5;ddx+=0.5;
+			GP_Point ptlst2[4] = {GP_Point((x1-ddx),(y1+ddy)),GP_Point((x1+ddx),(y1-ddy))
+				,GP_Point((x2+ddx),(y2-ddy)),GP_Point((x2-ddx),(y2+ddy))}; 
+// 			for(int i = 0 ; i<4;i++)
+// 			{
+// 				printf("%d-%d\t",ptlst[i].x,ptlst[i].y);
+// 			}
+			GP_Color color2(128,color.GetRed(),color.GetGreen(),color.GetBlue());
+			FillPolygonScanLine(ptlst,4,color);
+			FillPolygonScanLine(ptlst2,4,color2);
+// 			ddx = GP_ROUND(ddx+0.5); ddy = GP_ROUND(ddy+0.5); 
+// 			GP_Point ptlst2[4] = {GP_Point(GP_ROUND(x1-ddx),GP_ROUND(y1+ddy)),GP_Point(GP_ROUND(x1+ddx),GP_ROUND(y1-ddy))
+// 				,GP_Point(GP_ROUND(x2+ddx),GP_ROUND(y2-ddy)),GP_Point(GP_ROUND(x2-ddx),GP_ROUND(y2+ddy))}; 
+// 			GP_Color color2(255,color.GetRed(),color.GetGreen(),color.GetBlue());
+// 			FillPolygonScanLine(ptlst2,4,color2); 
+		}
 	}
 	else
 	{
-		if(y1>y2)
+		if(y1 == y2)
 		{
-			swap(&x1,&x2);
-			swap(&y1,&y2);
+			int y11=y1,y12=y1;
+			int iAdd1 = (width-1)/2;
+			y11-=iAdd1;y12+=iAdd1;
+			for(int k = y11;k<=y12;k++)
+				DrawLine(x1,k,x2,k,color);
 		}
-		dx=x2-x1;
-		dy=y2-y1;
-		p=-(dx<<1)-dy,same=-(dx<<1),change=-((dx+dy)<<1),x=x1,y=y1;
-		for(;y<=y2;y++)
+		else if(x1 == x2)
 		{
-			DrawPixel(x,y,cl);
-			if(p<0)
-				p+=same;
-			else
-			{
-				p+=change;
-				x--;
-			}
+			int x11=x1,x12=x1;
+			int iAdd1 = (width-1)/2;
+			x11-=iAdd1;x12+=iAdd1;
+			for(int k = x11;k<=x12;k++)
+				DrawLine(k,y1,k,y2,color);
 		}
-		return Ok;
+		else
+		{
+			double ddy = (double)width/(2.0*sqrt(double(1+((y2-y1)*(y2-y1))/((x2-x1)*(x2-x1)))));
+			double ddx = ddy*(y2-y1)/(x2-x1);
+			GP_Point ptlst[4] = {GP_Point(GP_ROUND(x1-ddx),GP_ROUND(y1+ddy)),GP_Point(GP_ROUND(x1+ddx),GP_ROUND(y1-ddy))
+				,GP_Point(GP_ROUND(x2+ddx),GP_ROUND(y2-ddy)),GP_Point(GP_ROUND(x2-ddx),GP_ROUND(y2+ddy))}; 
+			FillPolygonScanLine(ptlst,4,color);
+		}
 	}
-
 	return Ok; 
 }
 
@@ -457,13 +540,13 @@ GP_Status GP_PixelDrawer::DrawPolygon(GP_Point* pPointList,int iCount,GP_Color& 
 	{
 		return Failed;
 	}
-
-	for (int i = 0;i<iCount-1;i++)
+	int i = 0;
+	for (i = 0;i<iCount-1;i++)
 	{
-		DrawLine(pPointList[i],pPointList[i+1],color);
+		DrawLine(pPointList[i],pPointList[i+1],color,3);
 	}
 
-	DrawLine(pPointList[0],pPointList[i],color); 
+	DrawLine(pPointList[0],pPointList[i],color,3); 
 
 	return Ok;
 }
@@ -509,8 +592,8 @@ GP_Status GP_PixelDrawer::FillPolygonScanLine(GP_Point* pPointList,int iCount,GP
 			iCountNew++;
 		}
 	}
-
-	for (int y = top+1 ; y < bottom ; y ++)
+	int y = 0;
+	for (y = top+1 ; y < bottom ; y ++)
 	{
 		GP_GetPolygonScanLineCross(pPointList,iCountNew/*iCount*/,y,ymap);
 	}
@@ -768,6 +851,63 @@ GP_Status GP_PixelDrawer::DrawRect(int left,int top,int right,int bottom,GP_Colo
 	return Ok;
 }
 
+GP_Status GP_PixelDrawer::FillRect(int left,int top,int right,int bottom,RGB555& cl,BYTE alpha)
+{
+		if (m_buffer_pBits == NULL)
+	{
+		return Failed;
+	}
+
+	if (left>right || top>bottom || left>m_buffer_w || top>m_buffer_h || right<0 || bottom<0)
+	{
+		return Failed;
+	}
+
+	RGB555 src,dest;
+	dest = cl;
+
+	//消除超越目标缓冲区范围
+	left = left<0 ? 0:left;
+	top = top<0 ? 0:top;
+	right = right>m_buffer_w ? m_buffer_w : right;
+	bottom = bottom>m_buffer_h ? m_buffer_h : bottom;
+
+	if (alpha != 255)
+	{
+		for (int y = top ; y<bottom ; y++)
+		{
+			for (int x = left ; x<right ; x++)
+			{
+				//像素(x,y)在目标缓冲区内存位置
+				int index = table[y] + (x<<1);
+				//如果有透明度，则计算透明后的颜色
+				memcpy(&src,&m_buffer_pBits[index],2);
+				GP_AlphaBlend(src,dest,alpha);
+				memcpy(&m_buffer_pBits[index],&src,2);
+			}
+		}
+	}
+	else
+	{
+		//可填充矩形字节宽
+		int rect_Width = right - left;
+		int rect_Width_b = rect_Width<<1;
+		//准备一行像素
+		unsigned char* destbits = new unsigned char[rect_Width_b];
+		for (int x = 0 ; x<rect_Width ; x++)
+		{
+			memcpy(&destbits[x<<1],&dest,2);
+		}
+		//直接按行填充颜色
+		for (int y = top ; y<bottom ; y++)
+		{
+			memcpy(&m_buffer_pBits[table[y]+(left<<1)],destbits,rect_Width_b);
+		}
+		delete[] destbits;
+	}
+	return Ok;
+}
+
 GP_Status GP_PixelDrawer::FillRect(int left,int top,int right,int bottom,GP_Color& color){
 	if (m_buffer_pBits == NULL)
 	{
@@ -825,15 +965,26 @@ GP_Status GP_PixelDrawer::FillRect(int left,int top,int right,int bottom,GP_Colo
 	return Ok;
 }
 
-GP_Status GP_PixelDrawer::DrawPixel(int x,int y,RGB555 cl){
+void GP_PixelDrawer::DrawPixel(int x,int y,RGB555 cl,BYTE alpha){
 	if (x<0||y<0||x>=m_buffer_w||y>=m_buffer_h)
 	{
-		return Failed; 
+		return ; 
 	}
 	int index = table[y] + (x<<1);
-	//如果没有透明度则，直接填充颜色
-	memcpy(&m_buffer_pBits[index],&cl,2);
-	return Ok;
+	if(alpha == 255)
+	{
+		//如果没有透明度则，直接填充颜色
+		memcpy(&m_buffer_pBits[index],&cl,2);
+	}
+	else
+	{
+		//如果有透明度，则计算透明后的颜色
+		RGB555 src;
+		memcpy(&src,&m_buffer_pBits[index],2); 
+		GP_AlphaBlend(src,cl,alpha);
+		memcpy(&m_buffer_pBits[index],&src,2);
+	}
+	return ;
 
 }
 
@@ -845,7 +996,7 @@ GP_Status GP_PixelDrawer::DrawPixelScanLine(int x1,int x2,int y,RGB555 cl){
 	int index = table[y] + (x1<<1);
 	//如果没有透明度则，直接填充颜色
 	//memcpy(&m_buffer_pBits[index],&cl,2);
-	wmemset((unsigned short *)&m_buffer_pBits[index],cl,x2-x1);
+	wmemset((wchar_t *)&m_buffer_pBits[index],cl,x2-x1);
 	return Ok;
 }
 
@@ -1512,17 +1663,30 @@ GP_Status GP_PixelDrawer::FSBitMap2(){
 		{
 			double y = sqrt(pow(double(j-iX0),2)+pow(double(i-iY0),2))*2;
 			double x = (w0-1)*acos(double(j-iX0)*2/y)/GP_PAI; 
-			if ((int)x<0||(int)x>=w0||(int)y<0||(int)y>=h0)
+			int xx = GP_ROUND(x);
+			int yy = GP_ROUND(y);
+			if (xx<0||xx>=w0||yy<0||yy>=h0)
 			{
 				continue;
 			}
 			if (i > iR)
 			{
-				x = w0-x; 
+				xx = w0-xx; 
 			}
 			int index = (i*w0<<1) + (j<<1);
-			int index2 = ((int)y*w0<<1) + ((int)x<<1);
+#if 1
+			int index2 = (yy*w0<<1) + (xx<<1);
 			memcpy(&ppBit0[index],&ppBit1[index2],2);
+#else
+			RGB555 src1,src2,dest;
+			int index2_1 = ((int)y*w0<<1) + ((int)x<<1);
+			int index2_2 = (yy*w0<<1) + (xx<<1);
+			memcpy(&src1,&ppBit1[index2_1],2);
+			memcpy(&src2,&ppBit1[index2_2],2);
+			GP_Color clr((GetRValue_555(src1)+GetRValue_555(src2))/2,(GetGValue_555(src1)+GetGValue_555(src2))/2,(GetGValue_555(src1)+GetGValue_555(src2))/2);
+			dest = clr.Get555Value();
+			memcpy(&ppBit0[index],&dest,2);
+#endif
 		}
 	}
 	delete[] ppBit1;
@@ -1619,23 +1783,23 @@ GP_Status GP_PixelDrawer::StretchBitMap(int x,int y,int w,int h, GP_BitMap& bmp,
 	return Ok;
 }
 
-int GP_PixelDrawer::minINT(int a,int b,int c){
+int GP_PixelDrawer::minINT(int &a,int &b,int &c){
 	int ret = (a>b) ? b:a;
 	ret = (ret>c) ? c:ret;
 	return ret;
 }
 
-int GP_PixelDrawer::minINT(int a,int b){
+int GP_PixelDrawer::minINT(int &a,int &b){
 	return a > b ? b : a;
 }
 
-int GP_PixelDrawer::maxINT(int a,int b,int c){
+int GP_PixelDrawer::maxINT(int &a,int &b,int &c){
 	int ret = (a>b) ? a:b;
 	ret = (ret>c) ? ret:c;
 	return ret;
 }
 
-int GP_PixelDrawer::maxINT(int a,int b){
+int GP_PixelDrawer::maxINT(int &a,int &b){
 	return a > b ? a : b;
 }
 

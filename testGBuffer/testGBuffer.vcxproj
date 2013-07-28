@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName />
+    <SccLocalPath />
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>C:\temp\GBuffer\obj\testGBuffer\Debug\</OutDir>
+    <IntDir>C:\temp\GBuffer\obj\testGBuffer\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName)d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>C:\temp\GBuffer\obj\testGBuffer\Release\</OutDir>
+    <IntDir>C:\temp\GBuffer\obj\testGBuffer\Release\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;GIS_API_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>C:\temp\GBuffer\obj\testGBuffer\Debug\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>C:\temp\GBuffer\obj\testGBuffer\Debug\testGBuffer.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <ObjectFileName>C:\temp\GBuffer\obj\testGBuffer\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>C:\temp\GBuffer\obj\testGBuffer\Debug\</ProgramDataBaseFileName>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <AdditionalIncludeDirectories>C:\Program Files %28x86%29\Microsoft Visual Studio 10.0\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>copy "C:\temp\GBuffer\obj\testGBuffer\Debug\testGBufferd.exe" "C:\temp\GBuffer\bin\testGBufferd.exe"</Command>
+    </PostBuildEvent>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>C:\temp\GBuffer\obj\testGBuffer\Debug\testGBuffer.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>C:\temp\GBuffer\obj\testGBuffer\Debug\testGBuffer.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>C:\temp\GBuffer\obj\testGBuffer\Debug/testGBufferd.exe</OutputFile>
+      <AdditionalLibraryDirectories>C:\temp\gise\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Full</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>C:\Program Files %28x86%29\Microsoft Visual Studio 10.0\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;GIS_API_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>C:\temp\GBuffer\obj\testGBuffer\Release\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>C:\temp\GBuffer\obj\testGBuffer\Release\testGBuffer.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <ObjectFileName>C:\temp\GBuffer\obj\testGBuffer\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>C:\temp\GBuffer\obj\testGBuffer\Release\</ProgramDataBaseFileName>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>copy "C:\temp\GBuffer\obj\testGBuffer\Release\testGBuffer.exe" "C:\temp\GBuffer\bin\testGBuffer.exe"</Command>
+    </PostBuildEvent>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>C:\temp\GBuffer\obj\testGBuffer\Release\testGBuffer.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Microsoft Visual Studio\VC98\MFC\Include;C:\Program Files (x86)\Microsoft Visual Studio\VC98\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>C:\temp\GBuffer\obj\testGBuffer\Release\testGBuffer.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>C:\temp\GBuffer\obj\testGBuffer\Release\testGBuffer.exe</OutputFile>
+      <AdditionalLibraryDirectories>C:\temp\gise\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="bmpfile.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="RoadFindSelDlg.cpp" />
+    <ClCompile Include="StdAfx.cpp" />
+    <ClCompile Include="testGBuffer.cpp" />
+    <ClCompile Include="testGBufferDoc.cpp" />
+    <ClCompile Include="testGBufferView.cpp" />
+    <ClCompile Include="GP_BaseTools.cpp" />
+    <ClCompile Include="GP_BitMap.cpp" />
+    <ClCompile Include="GP_Dir.cpp" />
+    <ClCompile Include="GP_Document.cpp" />
+    <ClCompile Include="GP_DrawingArea.cpp" />
+    <ClCompile Include="GP_File.cpp" />
+    <ClCompile Include="GP_Node.cpp" />
+    <ClCompile Include="GP_PixelBuffer.cpp" />
+    <ClCompile Include="GP_PixelDrawer.cpp" />
+    <ClCompile Include="GP_Performance.cpp" />
+    <ClCompile Include="GP_Time.cpp" />
+    <ClCompile Include="pico\zlib\adler32.c" />
+    <ClCompile Include="pico\zlib\deflate.c" />
+    <ClCompile Include="pico\zlib\inffast.c" />
+    <ClCompile Include="pico\zlib\inflate.c" />
+    <ClCompile Include="pico\zlib\inftrees.c" />
+    <ClCompile Include="pico\zlib\trees.c" />
+    <ClCompile Include="pico\zlib\zutil.c" />
+    <ClCompile Include="pico\blockset.cpp" />
+    <ClCompile Include="pico\cache.cpp" />
+    <ClCompile Include="pico\cacheentry.cpp" />
+    <ClCompile Include="pico\compress.cpp" />
+    <ClCompile Include="pico\dir.cpp" />
+    <ClCompile Include="pico\diriterator.cpp" />
+    <ClCompile Include="pico\file.cpp" />
+    <ClCompile Include="pico\freespace.cpp" />
+    <ClCompile Include="pico\gen.cpp" />
+    <ClCompile Include="pico\hashtable.cpp" />
+    <ClCompile Include="pico\log.cpp" />
+    <ClCompile Include="pico\lru.cpp" />
+    <ClCompile Include="pico\os.cpp" />
+    <ClCompile Include="pico\osdir.cpp" />
+    <ClCompile Include="pico\osfile.cpp" />
+    <ClCompile Include="pico\picostorage.cpp" />
+    <ClCompile Include="pico\slices.cpp" />
+    <ClCompile Include="pico\storageparams.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="testGBuffer.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="bmpfile.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="RoadFindSelDlg.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="testGBuffer.h" />
+    <ClInclude Include="testGBufferDoc.h" />
+    <ClInclude Include="testGBufferView.h" />
+    <ClInclude Include="GP_BaseTools.h" />
+    <ClInclude Include="GP_BitMap.h" />
+    <ClInclude Include="GP_CommonType.h" />
+    <ClInclude Include="GP_Dir.h" />
+    <ClInclude Include="GP_Document.h" />
+    <ClInclude Include="GP_DrawingArea.h" />
+    <ClInclude Include="GP_File.h" />
+    <ClInclude Include="GP_Node.h" />
+    <ClInclude Include="GP_PixelBuffer.h" />
+    <ClInclude Include="GP_PixelDrawer.h" />
+    <ClInclude Include="GP_Utility.h" />
+    <ClInclude Include="GP_MemPool.h" />
+    <ClInclude Include="GP_Performance.h" />
+    <ClInclude Include="GP_Time.h" />
+    <ClInclude Include="pico\zlib\deflate.h" />
+    <ClInclude Include="pico\zlib\inffast.h" />
+    <ClInclude Include="pico\zlib\inffixed.h" />
+    <ClInclude Include="pico\zlib\inflate.h" />
+    <ClInclude Include="pico\zlib\inftrees.h" />
+    <ClInclude Include="pico\zlib\trees.h" />
+    <ClInclude Include="pico\zlib\zconf.h" />
+    <ClInclude Include="pico\zlib\zlib.h" />
+    <ClInclude Include="pico\zlib\zutil.h" />
+    <ClInclude Include="pico\offsetfile.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="res\testGBuffer.ico" />
+    <CustomBuild Include="res\testGBuffer.rc2">
+      <FileType>RC</FileType>
+    </CustomBuild>
+    <CustomBuild Include="res\testGBufferDoc.ico" />
+    <CustomBuild Include="res\Toolbar.bmp" />
+    <CustomBuild Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

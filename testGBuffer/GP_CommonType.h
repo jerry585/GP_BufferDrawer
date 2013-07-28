@@ -131,13 +131,15 @@ class GP_Color
 {
 protected:
 	ARGB m_argb ;
+	RGB555 m_rgb555;
+	RGB565 m_rgb565;
 	
 public:
 	// 构造函数
-	GP_Color(ARGB argb = 0xFF000000): m_argb(argb){}
-	GP_Color(BYTE a, BYTE r, BYTE g, BYTE b) {m_argb = MakeARGB(a,r,g,b);}
-	GP_Color(BYTE r, BYTE g, BYTE b) {m_argb = MakeARGB(255,r,g,b);}
-	GP_Color(BYTE a, const GP_Color& color) {m_argb = MakeARGB(a,color.GetRed(), color.GetGreen(), color.GetBlue());}
+	GP_Color(ARGB argb = 0xFF000000): m_argb(argb){Make565Value(); Make555Value();}
+	GP_Color(BYTE a, BYTE r, BYTE g, BYTE b) {m_argb = MakeARGB(a,r,g,b);Make565Value(); Make555Value();}
+	GP_Color(BYTE r, BYTE g, BYTE b) {m_argb = MakeARGB(255,r,g,b);Make565Value(); Make555Value();}
+	GP_Color(BYTE a, const GP_Color& color) {m_argb = MakeARGB(a,color.GetRed(), color.GetGreen(), color.GetBlue());Make565Value(); Make555Value();}
 	
 	~GP_Color(){};
 	
@@ -149,7 +151,7 @@ public:
 	
 	ARGB GetValue() const { return m_argb; }
 	
-	RGB565 Get565Value() const { 
+	RGB565 Make565Value() const { 
 		BYTE r = GetRed();
 		BYTE g = GetGreen();
 		BYTE b = GetBlue(); 
@@ -160,7 +162,7 @@ public:
 		return mrgb565; 
 	}
 
-	RGB555 Get555Value() const { 
+	RGB555 Make555Value() const { 
 		BYTE r = GetRed();
 		BYTE g = GetGreen();
 		BYTE b = GetBlue(); 
@@ -170,9 +172,18 @@ public:
 		RGB555 mrgb555 = (R<<10) | (G<<5) | B; 
 		return mrgb555; 
 	}
+
+	RGB565 Get565Value() const { 
+		return m_rgb565; 
+	}
+
+	RGB555 Get555Value() const { 
+
+		return m_rgb555; 
+	}
 	
 	// 设置值
-	void SetValue(BYTE a, BYTE r, BYTE g, BYTE b) { m_argb = MakeARGB(a,r,g,b); }
+	void SetValue(BYTE a, BYTE r, BYTE g, BYTE b) { m_argb = MakeARGB(a,r,g,b); Make565Value(); Make555Value();}
 	
 	
 	// 组合ARGB值
@@ -186,6 +197,8 @@ public:
 	
 	const GP_Color& operator=(const GP_Color& src){
 		m_argb = src.m_argb ;
+		Make565Value(); 
+		Make555Value();
 		return (*this) ;
 	}
 };
@@ -199,6 +212,8 @@ public:
 #define GetBValue_555(w)    ((BYTE)(((w) & 0x001F) << 3))
 
 #define RGB_565(r, g, b)    ((WORD)(( ( (r) >> 3 ) << 11 ) | ( ( (g) >> 2 ) << 5 ) | (( (b) >> 3 ) << 0)))
+
+#define GP_ROUND(x) (int)((x)>0?(x)+0.5:(x)-0.5)
 
 #ifndef NULL
 #define NULL 0

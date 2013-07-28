@@ -30,6 +30,8 @@ public:
 
 	GP_Status DrawRect(int left,int top,int right,int bottom,GP_Color& color);
 
+	GP_Status FillRect(int left,int top,int right,int bottom,RGB555& cl,BYTE alpha = 255);
+
 	GP_Status FillRect(int left,int top,int right,int bottom,GP_Color& color);
 
 	GP_Status DrawCircle(int x,int y,int r,GP_Color& color);
@@ -50,7 +52,7 @@ public:
 
 	GP_Status DrawPixel(int x,int y,GP_Color& color);
 
-	GP_Status DrawPixel(int x,int y,RGB555 cl);
+	void DrawPixel(int x,int y,RGB555 cl,BYTE alpha = 255);
 
 	GP_Status DrawPixelScanLine(int x1,int x2,int y,RGB555 cl);
 
@@ -86,10 +88,10 @@ private:
 	void swap(int* m,int* n);
 
 	//最大最小
-	int minINT(int a,int b,int c);
-	int minINT(int a,int b);
-	int maxINT(int a,int b,int c);
-	int maxINT(int a,int b);
+	int minINT(int &a,int &b,int &c);
+	int minINT(int &a,int &b);
+	int maxINT(int &a,int &b,int &c);
+	int maxINT(int &a,int &b);
 
 	int minINT(int* piValue,int iCount);
 	int maxINT(int* piValue,int iCount);

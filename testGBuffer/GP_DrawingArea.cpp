@@ -3,6 +3,7 @@
 
 #include "GP_DrawingArea.h"
 #include <math.h>
+#include <stdio.h>
 
 #define VIEWMAXWIDTH 4000	//绘图最大宽度
 #define VIEWMAXHIGHT 4000	//绘图最大高度
@@ -83,6 +84,48 @@ GP_Status GP_DrawingArea::GP_SetWindowArea(int left,int top,int right,int bottom
 	{
 		return Failed;
 	}
+	if(top<m_PhysicalBound.top || bottom>m_PhysicalBound.bottom)
+	{
+		printf("%d-%d-%d-%d\t",left,top,right,bottom);
+
+		if((top<m_PhysicalBound.top && bottom>m_PhysicalBound.bottom) || (bottom-top)>m_PhysicalBound.Hight())
+		{
+			top = m_PhysicalBound.top;
+			bottom = m_PhysicalBound.bottom;
+			int iMidX = (left+right)/2;
+			int w = (bottom-top)*(m_DrawingAreaRect.Width()/m_DrawingAreaRect.Hight());
+			left = iMidX - w/2;
+			right = iMidX + w/2;
+		}
+		else if(bottom>m_PhysicalBound.bottom)
+		{
+			//return Failed;
+			top -= (bottom - m_PhysicalBound.bottom);
+			bottom = m_PhysicalBound.bottom;
+			int iMidX = (left+right)/2;
+			int w = (bottom-top)*(m_DrawingAreaRect.Width()/m_DrawingAreaRect.Hight());
+			printf("w:%d iMidX:%d\n",w,iMidX);
+			left = iMidX - w/2;
+			right = iMidX + w/2;
+		}
+		else if(top<m_PhysicalBound.top)
+		{
+			//return Failed;
+			bottom += (m_PhysicalBound.top - top);
+			top = m_PhysicalBound.top;
+			int iMidX = (left+right)/2;
+			int w = (bottom-top)*(m_DrawingAreaRect.Width()/m_DrawingAreaRect.Hight());
+			printf("w:%d iMidX:%d\n",w,iMidX);
+			left = iMidX - w/2;
+			right = iMidX + w/2;
+		}
+		
+		printf("%d-%d-%d-%d\n",left,top,right,bottom);
+		//return Failed;
+	}
+
+
+	
 	
 	//设置的窗口范围比例和视图范围比例可能不一致，规范化（保证窗口范围在视图范围内都能显示）
 

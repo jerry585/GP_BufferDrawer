@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{fda76174-c0d2-4722-8ed4-893d7daca59a}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{7fc80ef1-6dc7-46ef-9db5-ec5c17396bfa}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{0fec8e88-6567-4f2c-a299-c212aacf282b}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="GBuffer">
+      <UniqueIdentifier>{401df27b-7887-46e8-98b6-cf57e9451803}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="testtool">
+      <UniqueIdentifier>{831158b6-e61d-4872-99eb-32d704a8c930}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pico">
+      <UniqueIdentifier>{7e2858f4-2abe-46f9-b634-2e8bfa88a718}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pico\zlib">
+      <UniqueIdentifier>{0ff9ad83-6ca7-474c-81bc-49483753ebad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataIO">
+      <UniqueIdentifier>{8d86a549-700d-4b40-b368-f7fc9618805e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="bmpfile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RoadFindSelDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="testGBuffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="testGBufferDoc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="testGBufferView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GP_BaseTools.cpp">
+      <Filter>GBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="GP_BitMap.cpp">
+      <Filter>GBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="GP_Dir.cpp">
+      <Filter>GBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="GP_Document.cpp">
+      <Filter>GBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="GP_DrawingArea.cpp">
+      <Filter>GBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="GP_File.cpp">
+      <Filter>GBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="GP_Node.cpp">
+      <Filter>GBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="GP_PixelBuffer.cpp">
+      <Filter>GBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="GP_PixelDrawer.cpp">
+      <Filter>GBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="GP_Performance.cpp">
+      <Filter>testtool</Filter>
+    </ClCompile>
+    <ClCompile Include="GP_Time.cpp">
+      <Filter>testtool</Filter>
+    </ClCompile>
+    <ClCompile Include="pico\zlib\adler32.c">
+      <Filter>pico\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="pico\zlib\deflate.c">
+      <Filter>pico\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="pico\zlib\inffast.c">
+      <Filter>pico\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="pico\zlib\inflate.c">
+      <Filter>pico\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="pico\zlib\inftrees.c">
+      <Filter>pico\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="pico\zlib\trees.c">
+      <Filter>pico\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="pico\zlib\zutil.c">
+      <Filter>pico\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="pico\blockset.cpp">
+      <Filter>pico</Filter>
+    </ClCompile>
+    <ClCompile Include="pico\cache.cpp">
+      <Filter>pico</Filter>
+    </ClCompile>
+    <ClCompile Include="pico\cacheentry.cpp">
+      <Filter>pico</Filter>
+    </ClCompile>
+    <ClCompile Include="pico\compress.cpp">
+      <Filter>pico</Filter>
+    </ClCompile>
+    <ClCompile Include="pico\dir.cpp">
+      <Filter>pico</Filter>
+    </ClCompile>
+    <ClCompile Include="pico\diriterator.cpp">
+      <Filter>pico</Filter>
+    </ClCompile>
+    <ClCompile Include="pico\file.cpp">
+      <Filter>pico</Filter>
+    </ClCompile>
+    <ClCompile Include="pico\freespace.cpp">
+      <Filter>pico</Filter>
+    </ClCompile>
+    <ClCompile Include="pico\gen.cpp">
+      <Filter>pico</Filter>
+    </ClCompile>
+    <ClCompile Include="pico\hashtable.cpp">
+      <Filter>pico</Filter>
+    </ClCompile>
+    <ClCompile Include="pico\log.cpp">
+      <Filter>pico</Filter>
+    </ClCompile>
+    <ClCompile Include="pico\lru.cpp">
+      <Filter>pico</Filter>
+    </ClCompile>
+    <ClCompile Include="pico\os.cpp">
+      <Filter>pico</Filter>
+    </ClCompile>
+    <ClCompile Include="pico\osdir.cpp">
+      <Filter>pico</Filter>
+    </ClCompile>
+    <ClCompile Include="pico\osfile.cpp">
+      <Filter>pico</Filter>
+    </ClCompile>
+    <ClCompile Include="pico\picostorage.cpp">
+      <Filter>pico</Filter>
+    </ClCompile>
+    <ClCompile Include="pico\slices.cpp">
+      <Filter>pico</Filter>
+    </ClCompile>
+    <ClCompile Include="pico\storageparams.cpp">
+      <Filter>pico</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="testGBuffer.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="bmpfile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RoadFindSelDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="testGBuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="testGBufferDoc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="testGBufferView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GP_BaseTools.h">
+      <Filter>GBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="GP_BitMap.h">
+      <Filter>GBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="GP_CommonType.h">
+      <Filter>GBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="GP_Dir.h">
+      <Filter>GBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="GP_Document.h">
+      <Filter>GBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="GP_DrawingArea.h">
+      <Filter>GBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="GP_File.h">
+      <Filter>GBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="GP_Node.h">
+      <Filter>GBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="GP_PixelBuffer.h">
+      <Filter>GBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="GP_PixelDrawer.h">
+      <Filter>GBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="GP_Utility.h">
+      <Filter>GBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="GP_MemPool.h">
+      <Filter>testtool</Filter>
+    </ClInclude>
+    <ClInclude Include="GP_Performance.h">
+      <Filter>testtool</Filter>
+    </ClInclude>
+    <ClInclude Include="GP_Time.h">
+      <Filter>testtool</Filter>
+    </ClInclude>
+    <ClInclude Include="pico\zlib\deflate.h">
+      <Filter>pico\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="pico\zlib\inffast.h">
+      <Filter>pico\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="pico\zlib\inffixed.h">
+      <Filter>pico\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="pico\zlib\inflate.h">
+      <Filter>pico\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="pico\zlib\inftrees.h">
+      <Filter>pico\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="pico\zlib\trees.h">
+      <Filter>pico\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="pico\zlib\zconf.h">
+      <Filter>pico\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="pico\zlib\zlib.h">
+      <Filter>pico\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="pico\zlib\zutil.h">
+      <Filter>pico\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="pico\offsetfile.hpp">
+      <Filter>pico</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="res\testGBuffer.ico">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="res\testGBuffer.rc2">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="res\testGBufferDoc.ico">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="res\Toolbar.bmp">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

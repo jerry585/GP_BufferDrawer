@@ -5,17 +5,17 @@
   Version: 	 1.0
   Date:  	 2010.12.03 
 
-  Description:    Reworks平台时统服务通用工具类,用于屏蔽不同平台大小端传输问题
+  Description:    Reworks平台时统服务通用工具�?用于屏蔽不同平台大小端传输问�?
 
-  Others:         // 其它内容的说明
-  Function List:  // 下文有详细的函数列表和功能描述
+  Others:         // 其它内容的说�?
+  Function List:  // 下文有详细的函数列表和功能描�?
      
   History:        
     
     
     1. Date:    2010/12/03  
        Author:  dubin lin
-       Modification: 规范化
+       Modification: 规范�?
       
 ***********************************************************************************/
 
@@ -31,7 +31,7 @@
 #define size_t long
 
 //
-// 编译时刻大小端检测。
+// 编译时刻大小端检测�?
 //
 // 大多数CPU只支持一种大小端,Itanium(IA64)和MIPS例外.
 //
@@ -43,7 +43,7 @@
 #   error "Unknown architecture"
 #endif
 
-//从小端的字节序字符串中读取一个T型值。
+//从小端的字节序字符串中读取一个T型值�?
 template <typename T>
 #ifdef _VXWORKS
 inline T strReadVal(const void* pBuffer, size_t pos)
@@ -66,7 +66,7 @@ inline T strReadVal(const void* pBuffer, size_t pos)
 
 
 //
-//将类型为T(int,short...)的值保存到pBuffer中。
+//将类型为T(int,short...)的值保存到pBuffer中�?
 //
 template <typename T>
 inline void gpWriteValue(void *pBuffer, T value)
@@ -82,7 +82,7 @@ inline void gpWriteValue(void *pBuffer, T value)
 	}
 }
 
-//以小端的字节序向字符串中写入一个T型值。
+//以小端的字节序向字符串中写入一个T型值�?
 template <typename T>
 inline void strWriteVal(void *pBuffer, T val)
 {

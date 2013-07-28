@@ -27,7 +27,7 @@
 #include "pico/offsetfile.hpp"
 
 #include "bmpfile.h"
-
+#include <iostream>
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #undef THIS_FILE
@@ -196,6 +196,7 @@ BEGIN_MESSAGE_MAP(CTestGBufferView, CView)
 	ON_COMMAND(AFX_ID_AREA768, OnIdArea768)
 	ON_COMMAND(AFX_ID_AREA1200, OnIdArea1200)
 	ON_COMMAND(AFX_ID_DRBMP, OnIdDrbmp)
+	ON_WM_MOUSEWHEEL()
 	//}}AFX_MSG_MAP
 	// Standard printing commands
 	ON_COMMAND(ID_FILE_PRINT, CView::OnFilePrint)
@@ -369,6 +370,10 @@ int CTestGBufferView::FillPolygonFeature (FILE* fp1, FILE* fp2,int m_iRecordNumb
 CTestGBufferView::CTestGBufferView()
 {
 	// TODO: add construction code here
+
+	AllocConsole();
+	::freopen("conout$","w",stdout);
+	
 	m_pbuffer1 = NULL;
 	m_pdrawer1 = NULL;
 	m_bmp_draw = false;
@@ -379,7 +384,8 @@ CTestGBufferView::CTestGBufferView()
 	movetimer = 0;
 	m_iDispScale = 1;
 	memset(&mint[0],0,256*sizeof(int));
-	for(int i = 0 ; i < 8 ; i ++)
+	int i = 0 ;
+	for(i = 0 ; i < 8 ; i ++)
 	{
 		for (int k = 0 ; k < 8 ; k ++)
 		{
@@ -718,25 +724,57 @@ void CTestGBufferView::OnIdLine()
 {
 	CClientDC dc(this);
 
+	int i = 0;
 	int t1 = clock();
-	for (int i = 0;i<100000;i++)
-	{
-		m_pdrawer1->DrawLine(10,10,100,100,GP_Color(255,0,0),2);
-	}
+// 	for (int i = 0;i<100000;i++)
+// 	{
+		m_pdrawer1->DrawLine(10,10,100,100,GP_Color(255,0,0),1);
+// 	}
 	m_pdrawer1->Update(dc.GetSafeHdc(),10,10);
 	int t2 = clock(); 
 	float s3 = (float)(t2-t1)/CLOCKS_PER_SEC;
 
 
 	t1 = clock();
-	for (i = 0;i<100000;i++)
-	{
-		m_pdrawer1->DrawLine(100,200,200,200,GP_Color(0,0,255),2);
-	}
+// 	for (i = 0;i<100000;i++)
+// 	{
+		m_pdrawer1->DrawLine(100,200,200,200,GP_Color(0,0,255),4);
+// 	}
 	m_pdrawer1->Update(dc.GetSafeHdc(),10,10);
 	t2 = clock(); 
 	float s4 = (float)(t2-t1)/CLOCKS_PER_SEC;
 
+	m_pdrawer1->DrawLine(200,200,300,200,GP_Color(0,0,255),6);
+	m_pdrawer1->DrawLine(300,200,400,200,GP_Color(0,0,255),8);
+	m_pdrawer1->DrawLine(400,200,500,200,GP_Color(0,0,255),2);
+	m_pdrawer1->DrawLine(500,200,600,200,GP_Color(0,0,255),1);
+
+	m_pdrawer1->DrawLine(700,0,700,100,GP_Color(0,0,255),1);
+	m_pdrawer1->DrawLine(700,100,700,200,GP_Color(0,0,255),2);
+	m_pdrawer1->DrawLine(700,200,700,300,GP_Color(0,0,255),3);
+	m_pdrawer1->DrawLine(700,300,700,400,GP_Color(0,0,255),4);
+	m_pdrawer1->DrawLine(700,400,700,500,GP_Color(0,0,255),5);
+	m_pdrawer1->DrawLine(700,500,700,600,GP_Color(0,0,255),6);
+	m_pdrawer1->DrawLine(700,600,700,700,GP_Color(0,0,255),7);
+
+
+	m_pdrawer1->DrawLine(10,10,100,100,GP_Color(255,0,0),1);
+	m_pdrawer1->DrawLine(100,100,200,200,GP_Color(255,0,0),2);
+	m_pdrawer1->DrawLine(200,200,300,300,GP_Color(255,0,0),3);
+	m_pdrawer1->DrawLine(300,300,400,400,GP_Color(255,0,0),4);
+	m_pdrawer1->DrawLine(400,400,500,500,GP_Color(255,0,0),5);
+	m_pdrawer1->DrawLine(500,500,600,600,GP_Color(255,0,0),6);
+	m_pdrawer1->DrawLine(600,600,700,700,GP_Color(255,0,0),7);
+	m_pdrawer1->DrawLine(700,700,800,800,GP_Color(255,0,0),8);
+	m_pdrawer1->DrawLine(800,800,900,700,GP_Color(255,0,0),8);
+	m_pdrawer1->DrawLine(800,800,1000,600,GP_Color(255,0,0),7);
+	m_pdrawer1->DrawLine(1000,600,1100,500,GP_Color(255,0,0),6);
+	m_pdrawer1->DrawLine(1100,500,1200,400,GP_Color(255,0,0),5);
+	m_pdrawer1->DrawLine(1200,400,1300,300,GP_Color(255,0,0),4);
+
+	m_pdrawer1->Update(dc.GetSafeHdc(),10,10);
+
+	return;
 	t1 = clock();
 	for (i = 0;i<100000;i++)
 	{
@@ -879,7 +917,8 @@ void CTestGBufferView::OnIdRectfill()
 {
 	CClientDC dc(this);
 	int t1 = clock();
-	for (int i = 0;i<10000;i++)
+	int i = 0;
+	for (i = 0;i<10000;i++)
 	{
 		m_pdrawer1->FillRect(430,0,480,50,GP_Color(255,0,0,255));
 	}
@@ -963,7 +1002,8 @@ void CTestGBufferView::OnIdLinegdi()
 	m_pdrawer1->Update(dc.GetSafeHdc(),10,10);
 
 	int t1 = clock();
-	for (int i = 0;i<10000;i++)
+	int i = 0;
+	for (i = 0;i<10000;i++)
 	{
 		m_pdrawer1->DrawLine(20,20,120,120,GP_Color(0,0,0));
 		m_pdrawer1->DrawLine(120,120,120,220,GP_Color(0,0,0));
@@ -1120,7 +1160,9 @@ void CTestGBufferView::OnIdSfbmp()
 	bmpw*=1.2;
 	bmph*=1.2;
 
-	for (int j = 60;j>= 0;j--)
+	int j = 60;
+
+	for ( j = 60;j>= 0;j--)
 	{
 		m_pdrawer1->Clear();
 		Sleep(10); 
@@ -1210,7 +1252,8 @@ void CTestGBufferView::OnIdXlbmp()
 	int bmph = bmp.GetHBITMAP().hight;
 
 	int t1 = clock(); 
-	for (int i = 0;i<= 360;i++)
+	int i = 0;
+	for (i = 0;i<= 360;i++)
 	{
 		m_pdrawer1->StretchBitMapRotate(600,200,bmpw,bmph,bmp,45);
 	}
@@ -1342,7 +1385,8 @@ void CTestGBufferView::OnIdXlbmp()
 void CTestGBufferView::OnIdHzjz() 
 {
 	//初始化网格
-	for(int i = 0 ; i < 8 ; i ++)
+	int i = 0 ;
+	for(i = 0 ; i < 8 ; i ++)
 	{
 		for (int k = 0 ; k < 8 ; k ++)
 		{
@@ -1385,12 +1429,13 @@ void CTestGBufferView::OnIdJsjx()
 	SE_Count = 0;
 
 	//列扫描，划分独立区块
-	for (int iRow = 0 ; iRow < 8 ; iRow++)
+	int iRow = 0 ;
+	for (iRow = 0 ; iRow < 8 ; iRow++)
 	{
 		int line = 0;
 		int start = 0;
 		int end = 0;
-		static flag = true;
+		static bool flag = true;
 		while (line != 9)
 		{
 			if (flag)
@@ -1722,7 +1767,8 @@ void CTestGBufferView::OnIdDjhz()
 	//      0
 	//           1    3
 	//
-	for (int i = 0 ; i < 5 ; i ++)
+	int i = 0 ;
+	for (i = 0 ; i < 5 ; i ++)
 	{
 		nodelist[i].inodeID = i;
 		nodelist[i].tested = 0;
@@ -2018,8 +2064,8 @@ void CTestGBufferView::DrawMapGP(){
 		}
 		//GP_GetBaseTools()->gp_rotate_points(180*iBS,90*iBS,(int*)ptlist,i,g_Angle);
 		m_pDrawingArea1->GP_WindowToClient((int*)ptlist,i);
-		m_pdrawer1->FillPolygonScanLine(ptlist,i,GP_Color(rand()%255,rand()%255,rand()%255));
-		//m_pdrawer1->DrawPolygon(ptlist,i,/*GP_Color(rand()%255,rand()%255,rand()%255)*/GP_Color(0,255,0));
+		m_pdrawer1->DrawPolygon(ptlist,i,/*GP_Color(rand()%255,rand()%255,rand()%255)*/GP_Color(0,255,0));
+		//m_pdrawer1->FillPolygonScanLine(ptlist,i,GP_Color(rand()%255,rand()%255,rand()%255));
 		delete[] ptlist; 
 	}
 }
@@ -2037,6 +2083,7 @@ void CTestGBufferView::OnIdDrawmap()
 	static bool flag = true;
 	if (flag)
 	{
+		m_pDrawingArea1->GP_SetPhysicalBound(0,0,360*360000,180*360000);
 		m_pDrawingArea1->GP_SetWindowArea(0,0,360*360000,180*360000);
 		m_iDispScale = 1;
 		flag = false;
@@ -2086,12 +2133,12 @@ void CTestGBufferView::OnIdMpzoomin()
 // 	}
 // 	else
 // 	{
-		//m_pDrawingArea1->GP_Zoom(2);
+		m_pDrawingArea1->GP_Zoom(2);
 // 		int x = 116.4211*360000+180*360000;
 // 		int y = 90*360000-39.8711*360000;
-		int x = 121.4856*360000+180*360000;
-		int y = 90*360000-31.0933*360000;
-		m_pDrawingArea1->GP_ZoomToWindow(x,y,2);
+// 		int x = 121.4856*360000+180*360000;
+// 		int y = 90*360000-31.0933*360000;
+// 		m_pDrawingArea1->GP_ZoomToWindow(x,y,2);
 //	}
 
 
@@ -2493,7 +2540,7 @@ void CTestGBufferView::OnIdArea1200()
 
 void CTestGBufferView::OnIdDrbmp() 
 {
-	const TCHAR filter[] = _T("BMP位图(*.*)");
+	const TCHAR filter[] = _T("BMP位图(*.*)||");
 	
 	CFileDialog dlg(TRUE,_T("*.bmp"),NULL,OFN_FILEMUSTEXIST,filter,this);
 	if (dlg.DoModal() != IDOK)
@@ -2506,4 +2553,21 @@ void CTestGBufferView::OnIdDrbmp()
 	m_pdrawer1->StretchBitMap(0,0,hbmp.width,hbmp.hight,bmp,250);
 	CClientDC dc(this);
 	m_pdrawer1->Update(dc.GetSafeHdc(),10,10); 
+}
+
+BOOL CTestGBufferView::OnMouseWheel(UINT nFlags, short zDelta, CPoint pt) 
+{
+	if (zDelta>0)
+	{
+		m_pDrawingArea1->GP_Zoom(2);
+		//m_pDrawingArea1->GP_ZoomToClient(pt.x,pt.y,2);
+	} 
+	else
+	{
+		m_pDrawingArea1->GP_Zoom(0.5);
+		//m_pDrawingArea1->GP_ZoomToClient(pt.x,pt.y,0.5);
+	}
+
+	OnIdDrawmap();
+	return CView::OnMouseWheel(nFlags, zDelta, pt);
 }

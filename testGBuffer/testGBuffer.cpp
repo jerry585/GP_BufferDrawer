@@ -62,6 +62,9 @@ BOOL CTestGBufferApp::InitInstance()
 	Enable3dControlsStatic();	// Call this when linking to MFC statically
 #endif
 
+	
+
+
 	// Change the registry key under which our settings are stored.
 	// TODO: You should modify this string to be something appropriate
 	// such as the name of your company or organization.
@@ -87,10 +90,18 @@ BOOL CTestGBufferApp::InitInstance()
 	// Dispatch commands specified on the command line
 	if (!ProcessShellCommand(cmdInfo))
 		return FALSE;
+	
+// 
+//  	HANDLE hdlWrite = GetStdHandle(STD_OUTPUT_HANDLE); //这里也可以使用STD_ERROR_HANDLE
+//   
+//  	TCHAR c[] = {"Hello world!"};
+//  	WriteConsole(hdlWrite, c, sizeof(c), NULL, NULL);
 
 	// The one and only window has been initialized, so show and update it.
 	m_pMainWnd->ShowWindow(SW_SHOW);
 	m_pMainWnd->UpdateWindow();
+
+	
 
 	return TRUE;
 }

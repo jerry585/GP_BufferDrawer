@@ -30,12 +30,18 @@ public:
 
 	GP_Status GP_RotateToAngle(int iAngle);
 
+	GP_Status GP_SetPhysicalBound(GP_RECT rectWindow){m_PhysicalBound = rectWindow; return Ok;}
+	GP_Status GP_SetPhysicalBound(int left,int top,int right,int bottom){m_PhysicalBound = GP_RECT(left,top,right,bottom); return Ok;}
+	void GP_GetPhysicalBound(GP_RECT &rRect){rRect = m_PhysicalBound;}
+
 private:
 	//视图区域
 	GP_RECT m_DrawingAreaRect;
 
 	//当前视图区域对应用户区域大小（窗口区域范围）
 	GP_RECT m_WindowAreaRect;
+
+	GP_RECT m_PhysicalBound;
 
 
 	int m_iAngle;
