@@ -2302,6 +2302,23 @@ void CTestGBufferView::OnMoveDown(){
 
 void CTestGBufferView::OnKeyUp(UINT nChar, UINT nRepCnt, UINT nFlags) 
 {
+	int i = 0 ;		double m = 100.0;
+	int t1 = clock();
+	for(i = 0 ; i< 10000000 ; i++)
+	{
+		int k = (double)pow((double)m,2);
+	}
+	int t2 = clock();
+	for(i = 0 ; i< 10000000 ; i++)
+	{
+		int k = m*m;
+	}
+	int t3 = clock(); 
+	float s1 = (float)(t2-t1)/CLOCKS_PER_SEC;
+	float s2 = (float)(t3-t2)/CLOCKS_PER_SEC;
+
+	printf("%f-%f\n",s1,s2);
+
 // 	if (nChar == 'r' || nChar == 'R')
 // 		OnIdRotatebmp();
 // 	else if(nChar == VK_ADD)
@@ -2550,7 +2567,7 @@ void CTestGBufferView::OnIdDrbmp()
 	GP_BitMap bmp;
 	bmp.LoadFromFile(str);
 	GP_HBITMAP  hbmp = m_pbuffer1->GetBitMapHandle();
-	m_pdrawer1->StretchBitMap(0,0,hbmp.width,hbmp.hight,bmp,250);
+	m_pdrawer1->StretchBitMap(0,0,hbmp.width,hbmp.hight,bmp,255);
 	CClientDC dc(this);
 	m_pdrawer1->Update(dc.GetSafeHdc(),10,10); 
 }

@@ -10,7 +10,7 @@
 GP_BitMap::GP_BitMap(){
 	m_hBitMap.width = 0;
 	m_hBitMap.hight = 0;
-	m_hBitMap.pixelformat = PIXEL_16BPP_RGB565;
+	m_hBitMap.pixelformat = PIXEL_16BPP_RGB555;
 }
 
 GP_BitMap::GP_BitMap(int w,int h,GP_PixelFormat pf){

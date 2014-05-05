@@ -136,10 +136,10 @@ protected:
 	
 public:
 	// ¹¹Ôìº¯Êý
-	GP_Color(ARGB argb = 0xFF000000): m_argb(argb){Make565Value(); Make555Value();}
-	GP_Color(BYTE a, BYTE r, BYTE g, BYTE b) {m_argb = MakeARGB(a,r,g,b);Make565Value(); Make555Value();}
-	GP_Color(BYTE r, BYTE g, BYTE b) {m_argb = MakeARGB(255,r,g,b);Make565Value(); Make555Value();}
-	GP_Color(BYTE a, const GP_Color& color) {m_argb = MakeARGB(a,color.GetRed(), color.GetGreen(), color.GetBlue());Make565Value(); Make555Value();}
+	GP_Color(ARGB argb = 0xFF000000): m_argb(argb){m_rgb565=Make565Value(); m_rgb555=Make555Value();}
+	GP_Color(BYTE a, BYTE r, BYTE g, BYTE b) {m_argb = MakeARGB(a,r,g,b);m_rgb565=Make565Value(); m_rgb555=Make555Value();}
+	GP_Color(BYTE r, BYTE g, BYTE b) {m_argb = MakeARGB(255,r,g,b);m_rgb565=Make565Value(); m_rgb555=Make555Value();}
+	GP_Color(BYTE a, const GP_Color& color) {m_argb = MakeARGB(a,color.GetRed(), color.GetGreen(), color.GetBlue());m_rgb565=Make565Value(); m_rgb555=Make555Value();}
 	
 	~GP_Color(){};
 	
@@ -158,8 +158,8 @@ public:
 		long R = r*31/255; 
 		long G = g*63/255; 
 		long B = b*31/255; 
-		RGB565 mrgb565 = (R<<11) | (G<<5) | B; 
-		return mrgb565; 
+		RGB565 rgb565 = (R<<11) | (G<<5) | B; 
+		return rgb565; 
 	}
 
 	RGB555 Make555Value() const { 
@@ -169,8 +169,8 @@ public:
 		long R = r*31/255; 
 		long G = g*31/255; 
 		long B = b*31/255; 
-		RGB555 mrgb555 = (R<<10) | (G<<5) | B; 
-		return mrgb555; 
+		RGB555 rgb555 = (R<<10) | (G<<5) | B; 
+		return rgb555; 
 	}
 
 	RGB565 Get565Value() const { 
